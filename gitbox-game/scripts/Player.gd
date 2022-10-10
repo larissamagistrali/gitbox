@@ -3,7 +3,9 @@ extends KinematicBody2D
 var velocity = Vector2.ZERO
 var move_speed = 100
 var gravity = 1200
-var jump_force = -300
+var jump_force = -100
+var is_grounded
+onready var raycasts = $"Raycasts-Node2D"
 
 func _physics_process(delta:float)->void:
 	velocity.y += gravity*delta

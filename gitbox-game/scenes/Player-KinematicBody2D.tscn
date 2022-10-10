@@ -187,3 +187,8 @@ anims/run = SubResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3.875 )
 shape = SubResource( 3 )
+
+[node name="Raycasts-Node2D" type="Node2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="Raycasts-Node2D"]
+collision_mask = 4
