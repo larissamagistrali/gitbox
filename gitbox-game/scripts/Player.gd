@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
 var velocity = Vector2.ZERO
-var move_speed = 200
+var move_speed = 500
 var gravity = 1200
-var jump_force = -400
+var jump_force = -450
 var is_grounded
 onready var raycasts = $"Raycasts-Node2D"
 

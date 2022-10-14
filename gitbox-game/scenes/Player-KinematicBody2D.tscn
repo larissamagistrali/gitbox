@@ -201,3 +201,5 @@ position = Vector2( 5, 0 )
 enabled = true
 cast_to = Vector2( 0, 32 )
 collision_mask = 4
+
+[node name="Camera2D" type="Camera2D" parent="."]
