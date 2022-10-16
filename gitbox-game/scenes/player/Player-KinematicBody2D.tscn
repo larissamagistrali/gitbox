@@ -87,6 +87,7 @@ tracks/2/keys = {
 [sub_resource type="Animation" id=4]
 resource_name = "jump"
 length = 0.5
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
@@ -191,15 +192,13 @@ shape = SubResource( 3 )
 [node name="Raycasts-Node2D" type="Node2D" parent="."]
 
 [node name="RayCast2D" type="RayCast2D" parent="Raycasts-Node2D"]
-position = Vector2( -6, 0 )
+position = Vector2( -8, 0 )
 enabled = true
 cast_to = Vector2( 0, 32 )
 collision_mask = 4
 
 [node name="RayCast2D2" type="RayCast2D" parent="Raycasts-Node2D"]
-position = Vector2( 5, 0 )
+position = Vector2( 8, 0 )
 enabled = true
 cast_to = Vector2( 0, 32 )
 collision_mask = 4
-
-[node name="Camera2D" type="Camera2D" parent="."]
