@@ -17,7 +17,7 @@ func init():
 func merge(var objects):
 	print("Merge in Scene 1")
 	for object in objects:
-		pushableObjects.append(object)
+		pushableObjects.append(PushableObject.new(object.node, object.positionX, object.positionY, object.originalPositionX, object.originalPositionY))
 		var a = object.node.instance()
 		a.position = Vector2(object.positionX, object.positionY)
 		get_tree().get_current_scene().add_child(a)

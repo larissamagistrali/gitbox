@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=1]
 [ext_resource path="res://assets/Menu/Buttons/Restart.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/animations/Transition_in.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/animations/Transition_out.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/levels/player/Player-KinematicBody2D.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1609,6 +1610,15 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 60/shapes = [  ]
 60/z_index = 0
 
+[sub_resource type="DynamicFont" id=83]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=84]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=85]
+font_data = ExtResource( 10 )
+
 [node name="Node2D-Level12" type="Node2D"]
 script = ExtResource( 5 )
 
@@ -1639,35 +1649,38 @@ script = ExtResource( 4 )
 path = "res://scenes/levels/level1/Node2D-Level1-1.tscn"
 
 [node name="Label" type="Label" parent="Panel"]
-margin_left = 30.0
+margin_left = 25.0
 margin_top = 7.0
-margin_right = 85.0
-margin_bottom = 21.0
+margin_right = 94.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 83 )
 text = "Cenários"
 
 [node name="btnScene1" type="Button" parent="Panel"]
 margin_left = 6.0
 margin_top = 31.0
-margin_right = 61.0
+margin_right = 70.0
 margin_bottom = 59.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 84 )
 enabled_focus_mode = 0
 text = "Cena 1"
 
 [node name="btnScene2" type="Button" parent="Panel"]
 margin_left = 6.0
 margin_top = 71.0
-margin_right = 61.0
+margin_right = 71.0
 margin_bottom = 99.0
+custom_fonts/font = SubResource( 85 )
 disabled = true
 enabled_focus_mode = 0
 text = "Cena 2"
 
 [node name="btnMergeScene2" type="Button" parent="Panel"]
-margin_left = 62.0
+margin_left = 70.0
 margin_top = 31.0
-margin_right = 95.0
+margin_right = 103.0
 margin_bottom = 59.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
@@ -1676,9 +1689,9 @@ icon = ExtResource( 2 )
 flat = true
 
 [node name="btnResetScene2" type="Button" parent="Panel"]
-margin_left = 62.0
+margin_left = 71.0
 margin_top = 71.0
-margin_right = 95.0
+margin_right = 104.0
 margin_bottom = 99.0
 focus_mode = 0
 mouse_default_cursor_shape = 2

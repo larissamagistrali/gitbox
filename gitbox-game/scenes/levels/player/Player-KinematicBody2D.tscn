@@ -87,7 +87,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id=4]
 resource_name = "jump"
 length = 0.5
-step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
@@ -186,34 +185,23 @@ anims/jump = SubResource( 4 )
 anims/run = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 4 )
+position = Vector2( 0, 3.875 )
 shape = SubResource( 3 )
 
 [node name="Raycasts-Node2D" type="Node2D" parent="."]
 
 [node name="RayCast2D" type="RayCast2D" parent="Raycasts-Node2D"]
-position = Vector2( -8, 0 )
+position = Vector2( -6, 0 )
 enabled = true
 cast_to = Vector2( 0, 32 )
 collision_mask = 4
 
 [node name="RayCast2D2" type="RayCast2D" parent="Raycasts-Node2D"]
-position = Vector2( 8, 0 )
+position = Vector2( 5, 0 )
 enabled = true
 cast_to = Vector2( 0, 32 )
 collision_mask = 4
 
-<<<<<<<< HEAD:gitbox-game/scenes/player/Player-KinematicBody2D.tscn
-[node name="Push-Node2D" type="Node2D" parent="."]
-
-[node name="RayCast2D-right" type="RayCast2D" parent="Push-Node2D"]
-position = Vector2( 11, 0 )
-cast_to = Vector2( 2, 0 )
-collision_mask = 8
-
-[node name="RayCast2D-left" type="RayCast2D" parent="Push-Node2D"]
-position = Vector2( -10, 0 )
-========
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="PushRight" type="RayCast2D" parent="."]
@@ -223,6 +211,5 @@ collision_mask = 8
 
 [node name="PushLeft" type="RayCast2D" parent="."]
 position = Vector2( -8, 8 )
->>>>>>>> 2b86ad1 (add scene change, merge mechanic and reset mechanic):gitbox-game/scenes/levels/player/Player-KinematicBody2D.tscn
 cast_to = Vector2( -2, 0 )
 collision_mask = 8
