@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=2]
+[gd_scene load_steps=93 format=2]
 
 [ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=1]
 [ext_resource path="res://assets/Menu/Buttons/Restart.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/animations/Transition_out.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/levels/player/Player-KinematicBody2D.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://scenes/itens/Star.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1713,6 +1714,9 @@ text = "Menu"
 [node name="Transition_in" parent="." instance=ExtResource( 7 )]
 
 [node name="Transition_out" parent="." instance=ExtResource( 8 )]
+
+[node name="Star" parent="." instance=ExtResource( 11 )]
+position = Vector2( 436, 183 )
 
 [connection signal="pressed" from="Panel/btnScene1" to="Panel" method="_on_btnScene1_pressed"]
 [connection signal="pressed" from="Panel/btnMergeScene2" to="Panel" method="_on_btnMergeScene2_pressed"]
