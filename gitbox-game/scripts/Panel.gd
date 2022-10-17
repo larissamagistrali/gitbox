@@ -17,3 +17,6 @@ func _on_btnResetScene2_pressed():
 	
 func _on_btnMergeScene2_pressed():
 	current_scene.merge(Level1Global.objects2)
+
+func _on_btnMenu_pressed() -> void:
+	changer.change_scene("res://scenes/itens/menu.tscn")
