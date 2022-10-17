@@ -1,0 +1,38 @@
+extends Node2D
+
+var pushableObjects = [];
+var pushableObjectsInstance = [];
+
+func _ready():
+	init()
+
+func init():
+	pushableObjects = Level1Global.objects1
+	for object in pushableObjects:
+		var a = object.node.instance()
+		a.position = Vector2(object.positionX, object.positionY)
+		get_tree().get_current_scene().add_child(a)
+		pushableObjectsInstance.append(a)
+
+func merge(var objects):
+	print("Merge in Scene 1")
+	for object in objects:
+		pushableObjects.append(object)
+		var a = object.node.instance()
+		a.position = Vector2(object.positionX, object.positionY)
+		get_tree().get_current_scene().add_child(a)
+		pushableObjectsInstance.append(a)
+	saveState()
+
+func reset():	
+	print("Reset Scene 1")
+	for i in range(pushableObjectsInstance.size()):
+		pushableObjectsInstance[i].position = Vector2(pushableObjects[i].originalPositionX, pushableObjects[i].originalPositionY)
+		saveState()
+
+func saveState():
+	print("Save State Scene 1")
+	for i in range(pushableObjectsInstance.size()):
+		pushableObjects[i].positionX = pushableObjectsInstance[i].position.x
+		pushableObjects[i].positionY = pushableObjectsInstance[i].position.y
+	Level1Global.objects1 = pushableObjects

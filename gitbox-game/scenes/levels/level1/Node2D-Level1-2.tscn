@@ -1,9 +1,14 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=87 format=2]
 
-[ext_resource path="res://scenes/itens/KinematicBody2D-Box.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/player/Player-KinematicBody2D.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=3]
-[ext_resource path="res://assets/Terrain/Terrain (16x16).png" type="Texture" id=4]
+[ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=1]
+[ext_resource path="res://assets/Menu/Buttons/Restart.png" type="Texture" id=2]
+[ext_resource path="res://assets/Menu/Buttons/Previous.png" type="Texture" id=3]
+[ext_resource path="res://scripts/Panel2.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Node2D-Level1.2.gd" type="Script" id=5]
+[ext_resource path="res://assets/Terrain/Terrain (16x16).png" type="Texture" id=6]
+[ext_resource path="res://scenes/animations/Transition_in.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/animations/Transition_out.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/levels/player/Player-KinematicBody2D.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -235,7 +240,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="TileSet" id=5]
 0/name = "Terrain (16x16).png 0"
-0/texture = ExtResource( 4 )
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 48, 0, 16, 16 )
@@ -274,7 +279,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 1/name = "Terrain (16x16).png 1"
-1/texture = ExtResource( 4 )
+1/texture = ExtResource( 6 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 128, 0, 16, 16 )
@@ -295,7 +300,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 1/z_index = 0
 2/name = "Terrain (16x16).png 2"
-2/texture = ExtResource( 4 )
+2/texture = ExtResource( 6 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 112, 0, 16, 16 )
@@ -316,7 +321,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 2/z_index = 0
 3/name = "Terrain (16x16).png 3"
-3/texture = ExtResource( 4 )
+3/texture = ExtResource( 6 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 144, 0, 16, 16 )
@@ -337,7 +342,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 3/z_index = 0
 4/name = "Terrain (16x16).png 4"
-4/texture = ExtResource( 4 )
+4/texture = ExtResource( 6 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 160, 0, 16, 16 )
@@ -358,7 +363,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 4/z_index = 0
 5/name = "Terrain (16x16).png 5"
-5/texture = ExtResource( 4 )
+5/texture = ExtResource( 6 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 96, 16, 16, 16 )
@@ -379,7 +384,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 5/z_index = 0
 6/name = "Terrain (16x16).png 6"
-6/texture = ExtResource( 4 )
+6/texture = ExtResource( 6 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 112, 16, 16, 16 )
@@ -412,7 +417,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 6/z_index = 0
 7/name = "Terrain (16x16).png 7"
-7/texture = ExtResource( 4 )
+7/texture = ExtResource( 6 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 128, 16, 16, 16 )
@@ -439,7 +444,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 7/z_index = 0
 8/name = "Terrain (16x16).png 8"
-8/texture = ExtResource( 4 )
+8/texture = ExtResource( 6 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 144, 16, 16, 16 )
@@ -460,7 +465,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 8/z_index = 0
 9/name = "Terrain (16x16).png 9"
-9/texture = ExtResource( 4 )
+9/texture = ExtResource( 6 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 160, 16, 16, 16 )
@@ -481,7 +486,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 9/z_index = 0
 10/name = "Terrain (16x16).png 10"
-10/texture = ExtResource( 4 )
+10/texture = ExtResource( 6 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 112, 32, 16, 16 )
@@ -532,7 +537,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 10/z_index = 0
 11/name = "Terrain (16x16).png 11"
-11/texture = ExtResource( 4 )
+11/texture = ExtResource( 6 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 128, 32, 16, 16 )
@@ -559,7 +564,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 11/z_index = 0
 12/name = "Terrain (16x16).png 12"
-12/texture = ExtResource( 4 )
+12/texture = ExtResource( 6 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 96, 32, 16, 16 )
@@ -586,7 +591,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 12/z_index = 0
 13/name = "Terrain (16x16).png 13"
-13/texture = ExtResource( 4 )
+13/texture = ExtResource( 6 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 272, 0, 16, 16 )
@@ -607,7 +612,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 13/z_index = 0
 14/name = "Terrain (16x16).png 14"
-14/texture = ExtResource( 4 )
+14/texture = ExtResource( 6 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 288, 0, 16, 16 )
@@ -628,7 +633,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 14/z_index = 0
 15/name = "Terrain (16x16).png 15"
-15/texture = ExtResource( 4 )
+15/texture = ExtResource( 6 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 304, 0, 16, 16 )
@@ -649,7 +654,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 15/z_index = 0
 16/name = "Terrain (16x16).png 16"
-16/texture = ExtResource( 4 )
+16/texture = ExtResource( 6 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 272, 16, 16, 16 )
@@ -670,7 +675,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 16/z_index = 0
 17/name = "Terrain (16x16).png 17"
-17/texture = ExtResource( 4 )
+17/texture = ExtResource( 6 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 288, 16, 16, 16 )
@@ -691,7 +696,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 17/z_index = 0
 18/name = "Terrain (16x16).png 18"
-18/texture = ExtResource( 4 )
+18/texture = ExtResource( 6 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 304, 16, 16, 16 )
@@ -712,7 +717,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 18/z_index = 0
 19/name = "Terrain (16x16).png 19"
-19/texture = ExtResource( 4 )
+19/texture = ExtResource( 6 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 272, 32, 16, 16 )
@@ -733,7 +738,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 19/z_index = 0
 20/name = "Terrain (16x16).png 20"
-20/texture = ExtResource( 4 )
+20/texture = ExtResource( 6 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 288, 32, 16, 16 )
@@ -754,7 +759,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 20/z_index = 0
 21/name = "Terrain (16x16).png 21"
-21/texture = ExtResource( 4 )
+21/texture = ExtResource( 6 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 304, 32, 16, 16 )
@@ -775,7 +780,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 21/z_index = 0
 22/name = "Terrain (16x16).png 22"
-22/texture = ExtResource( 4 )
+22/texture = ExtResource( 6 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 64, 16, 16 )
@@ -796,7 +801,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 22/z_index = 0
 23/name = "Terrain (16x16).png 23"
-23/texture = ExtResource( 4 )
+23/texture = ExtResource( 6 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 16, 64, 16, 16 )
@@ -817,7 +822,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 23/z_index = 0
 24/name = "Terrain (16x16).png 24"
-24/texture = ExtResource( 4 )
+24/texture = ExtResource( 6 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 32, 64, 16, 16 )
@@ -838,7 +843,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 24/z_index = 0
 25/name = "Terrain (16x16).png 25"
-25/texture = ExtResource( 4 )
+25/texture = ExtResource( 6 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 48, 64, 16, 16 )
@@ -859,7 +864,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 25/z_index = 0
 26/name = "Terrain (16x16).png 26"
-26/texture = ExtResource( 4 )
+26/texture = ExtResource( 6 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 48, 80, 16, 16 )
@@ -880,7 +885,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 26/z_index = 0
 27/name = "Terrain (16x16).png 27"
-27/texture = ExtResource( 4 )
+27/texture = ExtResource( 6 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 64, 64, 16, 16 )
@@ -901,7 +906,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 27/z_index = 0
 28/name = "Terrain (16x16).png 28"
-28/texture = ExtResource( 4 )
+28/texture = ExtResource( 6 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 64, 80, 16, 16 )
@@ -922,7 +927,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 28/z_index = 0
 29/name = "Terrain (16x16).png 29"
-29/texture = ExtResource( 4 )
+29/texture = ExtResource( 6 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 80, 16, 16 )
@@ -943,7 +948,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 29/z_index = 0
 30/name = "Terrain (16x16).png 30"
-30/texture = ExtResource( 4 )
+30/texture = ExtResource( 6 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 16, 80, 16, 16 )
@@ -964,7 +969,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 30/z_index = 0
 31/name = "Terrain (16x16).png 31"
-31/texture = ExtResource( 4 )
+31/texture = ExtResource( 6 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 32, 80, 16, 16 )
@@ -985,7 +990,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 31/z_index = 0
 32/name = "Terrain (16x16).png 32"
-32/texture = ExtResource( 4 )
+32/texture = ExtResource( 6 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 0, 96, 16, 16 )
@@ -1006,7 +1011,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 32/z_index = 0
 33/name = "Terrain (16x16).png 33"
-33/texture = ExtResource( 4 )
+33/texture = ExtResource( 6 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 32, 96, 16, 16 )
@@ -1027,7 +1032,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 33/z_index = 0
 34/name = "Terrain (16x16).png 34"
-34/texture = ExtResource( 4 )
+34/texture = ExtResource( 6 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 16, 96, 16, 16 )
@@ -1048,7 +1053,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 34/z_index = 0
 35/name = "Terrain (16x16).png 35"
-35/texture = ExtResource( 4 )
+35/texture = ExtResource( 6 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 208, 0, 16, 16 )
@@ -1069,7 +1074,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 35/z_index = 0
 36/name = "Terrain (16x16).png 36"
-36/texture = ExtResource( 4 )
+36/texture = ExtResource( 6 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 224, 0, 16, 16 )
@@ -1090,7 +1095,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 36/z_index = 0
 37/name = "Terrain (16x16).png 37"
-37/texture = ExtResource( 4 )
+37/texture = ExtResource( 6 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
 37/region = Rect2( 240, 0, 16, 16 )
@@ -1111,7 +1116,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 37/z_index = 0
 38/name = "Terrain (16x16).png 38"
-38/texture = ExtResource( 4 )
+38/texture = ExtResource( 6 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
 38/region = Rect2( 240, 16, 16, 16 )
@@ -1132,7 +1137,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 38/z_index = 0
 39/name = "Terrain (16x16).png 39"
-39/texture = ExtResource( 4 )
+39/texture = ExtResource( 6 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
 39/region = Rect2( 224, 16, 16, 16 )
@@ -1159,7 +1164,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 39/z_index = 0
 40/name = "Terrain (16x16).png 40"
-40/texture = ExtResource( 4 )
+40/texture = ExtResource( 6 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 208, 16, 16, 16 )
@@ -1180,7 +1185,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 40/z_index = 0
 41/name = "Terrain (16x16).png 41"
-41/texture = ExtResource( 4 )
+41/texture = ExtResource( 6 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 192, 0, 16, 16 )
@@ -1213,7 +1218,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 41/z_index = 0
 42/name = "Terrain (16x16).png 42"
-42/texture = ExtResource( 4 )
+42/texture = ExtResource( 6 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 192, 16, 16, 16 )
@@ -1234,7 +1239,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 42/z_index = 0
 43/name = "Terrain (16x16).png 43"
-43/texture = ExtResource( 4 )
+43/texture = ExtResource( 6 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 208, 32, 16, 16 )
@@ -1255,7 +1260,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 43/z_index = 0
 44/name = "Terrain (16x16).png 44"
-44/texture = ExtResource( 4 )
+44/texture = ExtResource( 6 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
 44/region = Rect2( 224, 32, 16, 16 )
@@ -1276,7 +1281,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 44/z_index = 0
 45/name = "Terrain (16x16).png 45"
-45/texture = ExtResource( 4 )
+45/texture = ExtResource( 6 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 240, 32, 16, 16 )
@@ -1297,7 +1302,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 45/z_index = 0
 46/name = "Terrain (16x16).png 46"
-46/texture = ExtResource( 4 )
+46/texture = ExtResource( 6 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 0, 0, 16, 16 )
@@ -1318,7 +1323,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 46/z_index = 0
 47/name = "Terrain (16x16).png 47"
-47/texture = ExtResource( 4 )
+47/texture = ExtResource( 6 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 16, 0, 16, 16 )
@@ -1339,7 +1344,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 47/z_index = 0
 48/name = "Terrain (16x16).png 48"
-48/texture = ExtResource( 4 )
+48/texture = ExtResource( 6 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
 48/region = Rect2( 32, 0, 16, 16 )
@@ -1360,7 +1365,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 48/z_index = 0
 49/name = "Terrain (16x16).png 49"
-49/texture = ExtResource( 4 )
+49/texture = ExtResource( 6 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
 49/region = Rect2( 64, 0, 16, 16 )
@@ -1381,7 +1386,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 49/z_index = 0
 50/name = "Terrain (16x16).png 50"
-50/texture = ExtResource( 4 )
+50/texture = ExtResource( 6 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
 50/region = Rect2( 64, 16, 16, 16 )
@@ -1402,7 +1407,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 50/z_index = 0
 51/name = "Terrain (16x16).png 51"
-51/texture = ExtResource( 4 )
+51/texture = ExtResource( 6 )
 51/tex_offset = Vector2( 0, 0 )
 51/modulate = Color( 1, 1, 1, 1 )
 51/region = Rect2( 48, 16, 16, 16 )
@@ -1423,7 +1428,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 51/z_index = 0
 52/name = "Terrain (16x16).png 52"
-52/texture = ExtResource( 4 )
+52/texture = ExtResource( 6 )
 52/tex_offset = Vector2( 0, 0 )
 52/modulate = Color( 1, 1, 1, 1 )
 52/region = Rect2( 32, 32, 16, 16 )
@@ -1444,7 +1449,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 52/z_index = 0
 53/name = "Terrain (16x16).png 53"
-53/texture = ExtResource( 4 )
+53/texture = ExtResource( 6 )
 53/tex_offset = Vector2( 0, 0 )
 53/modulate = Color( 1, 1, 1, 1 )
 53/region = Rect2( 32, 16, 16, 16 )
@@ -1465,7 +1470,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 53/z_index = 0
 54/name = "Terrain (16x16).png 54"
-54/texture = ExtResource( 4 )
+54/texture = ExtResource( 6 )
 54/tex_offset = Vector2( 0, 0 )
 54/modulate = Color( 1, 1, 1, 1 )
 54/region = Rect2( 16, 16, 16, 16 )
@@ -1486,7 +1491,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 54/z_index = 0
 55/name = "Terrain (16x16).png 55"
-55/texture = ExtResource( 4 )
+55/texture = ExtResource( 6 )
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
 55/region = Rect2( 16, 32, 16, 16 )
@@ -1507,7 +1512,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 55/z_index = 0
 56/name = "Terrain (16x16).png 56"
-56/texture = ExtResource( 4 )
+56/texture = ExtResource( 6 )
 56/tex_offset = Vector2( 0, 0 )
 56/modulate = Color( 1, 1, 1, 1 )
 56/region = Rect2( 0, 16, 16, 16 )
@@ -1528,7 +1533,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 56/z_index = 0
 57/name = "Terrain (16x16).png 57"
-57/texture = ExtResource( 4 )
+57/texture = ExtResource( 6 )
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
 57/region = Rect2( 0, 32, 16, 16 )
@@ -1555,7 +1560,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 57/z_index = 0
 58/name = "Terrain (16x16).png 58"
-58/texture = ExtResource( 4 )
+58/texture = ExtResource( 6 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
 58/region = Rect2( 0, 0, 16, 16 )
@@ -1569,7 +1574,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 58/shapes = [  ]
 58/z_index = 0
 59/name = "Terrain (16x16).png 59"
-59/texture = ExtResource( 4 )
+59/texture = ExtResource( 6 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
 59/region = Rect2( 96, 0, 16, 16 )
@@ -1590,7 +1595,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 59/z_index = 0
 60/name = "Terrain (16x16).png 60"
-60/texture = ExtResource( 4 )
+60/texture = ExtResource( 6 )
 60/tex_offset = Vector2( 0, 0 )
 60/modulate = Color( 1, 1, 1, 1 )
 60/region = Rect2( 96, 0, 16, 16 )
@@ -1604,12 +1609,13 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 60/shapes = [  ]
 60/z_index = 0
 
-[node name="Node2D-Level1-2" type="Node2D"]
+[node name="Node2D-Level12" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 16, -48 )
 scale = Vector2( 1.69231, 1.69231 )
-texture = ExtResource( 3 )
+texture = ExtResource( 1 )
 centered = false
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1619,10 +1625,71 @@ show_collision = true
 collision_layer = 4
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 0, 52, 0, 1, 55, 0, 2, 55, 0, 3, 55, 0, 4, 55, 0, 5, 55, 0, 6, 55, 0, 7, 55, 0, 8, 55, 0, 9, 55, 0, 10, 55, 0, 11, 55, 0, 12, 55, 0, 13, 55, 0, 14, 55, 0, 15, 55, 0, 16, 55, 0, 17, 55, 0, 18, 55, 0, 19, 55, 0, 20, 55, 0, 21, 55, 0, 22, 55, 0, 23, 55, 0, 24, 55, 0, 25, 55, 0, 26, 55, 0, 27, 55, 0, 28, 55, 0, 29, 55, 0, 30, 55, 0, 31, 55, 0, 32, 55, 0, 33, 55, 0, 34, 55, 0, 35, 55, 0, 36, 55, 0, 37, 55, 0, 38, 55, 0, 39, 49, 0, 65536, 53, 0, 65567, 56, 0, 65568, 54, 0, 65569, 54, 0, 65570, 54, 0, 65571, 54, 0, 65572, 54, 0, 65573, 54, 0, 65574, 54, 0, 65575, 56, 0, 131072, 53, 0, 131103, 56, 0, 131104, 54, 0, 131105, 54, 0, 131106, 54, 0, 131107, 54, 0, 131108, 54, 0, 131109, 54, 0, 131110, 54, 0, 131111, 56, 0, 196608, 53, 0, 196639, 56, 0, 196640, 54, 0, 196641, 54, 0, 196642, 54, 0, 196643, 54, 0, 196644, 54, 0, 196645, 54, 0, 196646, 54, 0, 196647, 56, 0, 262144, 53, 0, 262175, 56, 0, 262176, 54, 0, 262177, 54, 0, 262178, 54, 0, 262179, 54, 0, 262180, 54, 0, 262181, 54, 0, 262182, 54, 0, 262183, 56, 0, 327680, 53, 0, 327711, 56, 0, 327712, 54, 0, 327713, 54, 0, 327714, 54, 0, 327715, 54, 0, 327716, 54, 0, 327717, 54, 0, 327718, 54, 0, 327719, 56, 0, 393216, 53, 0, 393247, 56, 0, 393248, 54, 0, 393249, 54, 0, 393250, 54, 0, 393251, 54, 0, 393252, 54, 0, 393253, 54, 0, 393254, 54, 0, 393255, 56, 0, 458752, 53, 0, 458783, 56, 0, 458784, 54, 0, 458785, 54, 0, 458786, 54, 0, 458787, 54, 0, 458788, 54, 0, 458789, 54, 0, 458790, 54, 0, 458791, 56, 0, 524288, 53, 0, 524319, 56, 0, 524320, 54, 0, 524321, 54, 0, 524322, 54, 0, 524323, 54, 0, 524324, 54, 0, 524325, 54, 0, 524326, 54, 0, 524327, 56, 0, 589824, 53, 0, 589855, 56, 0, 589856, 54, 0, 589857, 54, 0, 589858, 54, 0, 589859, 54, 0, 589860, 54, 0, 589861, 54, 0, 589862, 54, 0, 589863, 56, 0, 655360, 53, 0, 655391, 56, 0, 655392, 54, 0, 655393, 54, 0, 655394, 54, 0, 655395, 54, 0, 655396, 54, 0, 655397, 54, 0, 655398, 54, 0, 655399, 56, 0, 720896, 53, 0, 720927, 56, 0, 720928, 54, 0, 720929, 54, 0, 720930, 54, 0, 720931, 54, 0, 720932, 54, 0, 720933, 54, 0, 720934, 54, 0, 720935, 56, 0, 786432, 53, 0, 786463, 56, 0, 786464, 54, 0, 786465, 54, 0, 786466, 54, 0, 786467, 54, 0, 786468, 54, 0, 786469, 54, 0, 786470, 54, 0, 786471, 56, 0, 851968, 53, 0, 851999, 56, 0, 852000, 54, 0, 852001, 54, 0, 852002, 54, 0, 852003, 54, 0, 852004, 54, 0, 852005, 54, 0, 852006, 54, 0, 852007, 56, 0, 917504, 53, 0, 917535, 56, 0, 917536, 54, 0, 917537, 54, 0, 917538, 54, 0, 917539, 54, 0, 917540, 54, 0, 917541, 54, 0, 917542, 54, 0, 917543, 56, 0, 983040, 53, 0, 983071, 56, 0, 983072, 54, 0, 983073, 54, 0, 983074, 54, 0, 983075, 54, 0, 983076, 54, 0, 983077, 54, 0, 983078, 54, 0, 983079, 56, 0, 1048576, 53, 0, 1048607, 56, 0, 1048608, 54, 0, 1048609, 54, 0, 1048610, 54, 0, 1048611, 54, 0, 1048612, 54, 0, 1048613, 54, 0, 1048614, 54, 0, 1048615, 56, 0, 1114112, 53, 0, 1114143, 56, 0, 1114144, 54, 0, 1114145, 54, 0, 1114146, 54, 0, 1114147, 54, 0, 1114148, 54, 0, 1114149, 54, 0, 1114150, 54, 0, 1114151, 56, 0, 1179648, 53, 0, 1179679, 56, 0, 1179680, 54, 0, 1179681, 54, 0, 1179682, 54, 0, 1179683, 54, 0, 1179684, 54, 0, 1179685, 54, 0, 1179686, 54, 0, 1179687, 56, 0, 1245184, 53, 0, 1245185, 2, 0, 1245186, 2, 0, 1245187, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245190, 2, 0, 1245191, 2, 0, 1245192, 2, 0, 1245193, 2, 0, 1245194, 2, 0, 1245195, 2, 0, 1245196, 2, 0, 1245197, 2, 0, 1245198, 2, 0, 1245199, 2, 0, 1245200, 2, 0, 1245201, 2, 0, 1245202, 2, 0, 1245203, 2, 0, 1245204, 2, 0, 1245205, 2, 0, 1245206, 2, 0, 1245207, 2, 0, 1245208, 2, 0, 1245209, 2, 0, 1245210, 2, 0, 1245211, 2, 0, 1245212, 2, 0, 1245213, 2, 0, 1245214, 2, 0, 1245215, 56, 0, 1245216, 54, 0, 1245217, 54, 0, 1245218, 54, 0, 1245219, 54, 0, 1245220, 54, 0, 1245221, 54, 0, 1245222, 54, 0, 1245223, 56, 0, 1310720, 53, 0, 1310721, 6, 0, 1310722, 6, 0, 1310723, 6, 0, 1310724, 6, 0, 1310725, 6, 0, 1310726, 6, 0, 1310727, 6, 0, 1310728, 6, 0, 1310729, 6, 0, 1310730, 6, 0, 1310731, 6, 0, 1310732, 6, 0, 1310733, 6, 0, 1310734, 6, 0, 1310735, 6, 0, 1310736, 6, 0, 1310737, 6, 0, 1310738, 6, 0, 1310739, 6, 0, 1310740, 6, 0, 1310741, 6, 0, 1310742, 6, 0, 1310743, 6, 0, 1310744, 6, 0, 1310745, 6, 0, 1310746, 6, 0, 1310747, 6, 0, 1310748, 6, 0, 1310749, 6, 0, 1310750, 6, 0, 1310751, 56, 0, 1310752, 54, 0, 1310753, 54, 0, 1310754, 54, 0, 1310755, 54, 0, 1310756, 54, 0, 1310757, 54, 0, 1310758, 54, 0, 1310759, 56, 0, 1376256, 53, 0, 1376257, 6, 0, 1376258, 6, 0, 1376259, 6, 0, 1376260, 6, 0, 1376261, 6, 0, 1376262, 6, 0, 1376263, 6, 0, 1376264, 6, 0, 1376265, 6, 0, 1376266, 6, 0, 1376267, 6, 0, 1376268, 6, 0, 1376269, 6, 0, 1376270, 6, 0, 1376271, 6, 0, 1376272, 6, 0, 1376273, 6, 0, 1376274, 6, 0, 1376275, 6, 0, 1376276, 6, 0, 1376277, 6, 0, 1376278, 6, 0, 1376279, 6, 0, 1376280, 6, 0, 1376281, 6, 0, 1376282, 6, 0, 1376283, 6, 0, 1376284, 6, 0, 1376285, 6, 0, 1376286, 6, 0, 1376287, 56, 0, 1376288, 54, 0, 1376289, 54, 0, 1376290, 54, 0, 1376291, 54, 0, 1376292, 54, 0, 1376293, 54, 0, 1376294, 54, 0, 1376295, 56, 0, 1441792, 53, 0, 1441793, 6, 0, 1441794, 6, 0, 1441795, 6, 0, 1441796, 6, 0, 1441797, 6, 0, 1441798, 6, 0, 1441799, 6, 0, 1441800, 6, 0, 1441801, 6, 0, 1441802, 6, 0, 1441803, 6, 0, 1441804, 6, 0, 1441805, 6, 0, 1441806, 6, 0, 1441807, 6, 0, 1441808, 6, 0, 1441809, 6, 0, 1441810, 6, 0, 1441811, 6, 0, 1441812, 6, 0, 1441813, 6, 0, 1441814, 6, 0, 1441815, 6, 0, 1441816, 6, 0, 1441817, 6, 0, 1441818, 6, 0, 1441819, 6, 0, 1441820, 6, 0, 1441821, 6, 0, 1441822, 6, 0, 1441823, 56, 0, 1441824, 54, 0, 1441825, 54, 0, 1441826, 54, 0, 1441827, 54, 0, 1441828, 54, 0, 1441829, 54, 0, 1441830, 54, 0, 1441831, 56, 0, 1507328, 51, 0, 1507329, 47, 0, 1507330, 47, 0, 1507331, 47, 0, 1507332, 47, 0, 1507333, 47, 0, 1507334, 47, 0, 1507335, 47, 0, 1507336, 47, 0, 1507337, 47, 0, 1507338, 47, 0, 1507339, 47, 0, 1507340, 47, 0, 1507341, 47, 0, 1507342, 47, 0, 1507343, 47, 0, 1507344, 47, 0, 1507345, 47, 0, 1507346, 47, 0, 1507347, 47, 0, 1507348, 47, 0, 1507349, 47, 0, 1507350, 47, 0, 1507351, 47, 0, 1507352, 47, 0, 1507353, 47, 0, 1507354, 47, 0, 1507355, 47, 0, 1507356, 47, 0, 1507357, 47, 0, 1507358, 47, 0, 1507359, 47, 0, 1507360, 47, 0, 1507361, 47, 0, 1507362, 47, 0, 1507363, 47, 0, 1507364, 47, 0, 1507365, 47, 0, 1507366, 47, 0, 1507367, 50, 0 )
+tile_data = PoolIntArray( 0, 52, 0, 1, 55, 0, 2, 55, 0, 3, 55, 0, 4, 55, 0, 5, 55, 0, 6, 55, 0, 7, 55, 0, 8, 55, 0, 9, 55, 0, 10, 55, 0, 11, 55, 0, 12, 55, 0, 13, 55, 0, 14, 55, 0, 15, 55, 0, 16, 55, 0, 17, 55, 0, 18, 55, 0, 19, 55, 0, 20, 55, 0, 21, 55, 0, 22, 55, 0, 23, 55, 0, 24, 55, 0, 25, 55, 0, 26, 55, 0, 27, 55, 0, 28, 55, 0, 29, 55, 0, 30, 55, 0, 31, 55, 0, 32, 55, 0, 33, 55, 0, 34, 55, 0, 35, 55, 0, 36, 55, 0, 37, 55, 0, 38, 55, 0, 39, 49, 0, 65536, 53, 0, 65567, 56, 0, 65568, 54, 0, 65569, 54, 0, 65570, 54, 0, 65571, 54, 0, 65572, 54, 0, 65573, 54, 0, 65574, 54, 0, 65575, 56, 0, 131072, 53, 0, 131103, 56, 0, 131104, 54, 0, 131105, 54, 0, 131106, 54, 0, 131107, 54, 0, 131108, 54, 0, 131109, 54, 0, 131110, 54, 0, 131111, 56, 0, 196608, 53, 0, 196639, 56, 0, 196640, 54, 0, 196641, 54, 0, 196642, 54, 0, 196643, 54, 0, 196644, 54, 0, 196645, 54, 0, 196646, 54, 0, 196647, 56, 0, 262144, 53, 0, 262175, 56, 0, 262176, 54, 0, 262177, 54, 0, 262178, 54, 0, 262179, 54, 0, 262180, 54, 0, 262181, 54, 0, 262182, 54, 0, 262183, 56, 0, 327680, 53, 0, 327711, 56, 0, 327712, 54, 0, 327713, 54, 0, 327714, 54, 0, 327715, 54, 0, 327716, 54, 0, 327717, 54, 0, 327718, 54, 0, 327719, 56, 0, 393216, 53, 0, 393247, 56, 0, 393248, 54, 0, 393249, 54, 0, 393250, 54, 0, 393251, 54, 0, 393252, 54, 0, 393253, 54, 0, 393254, 54, 0, 393255, 56, 0, 458752, 53, 0, 458783, 56, 0, 458784, 54, 0, 458785, 54, 0, 458786, 54, 0, 458787, 54, 0, 458788, 54, 0, 458789, 54, 0, 458790, 54, 0, 458791, 56, 0, 524288, 53, 0, 524319, 56, 0, 524320, 54, 0, 524321, 54, 0, 524322, 54, 0, 524323, 54, 0, 524324, 54, 0, 524325, 54, 0, 524326, 54, 0, 524327, 56, 0, 589824, 53, 0, 589855, 56, 0, 589856, 54, 0, 589857, 54, 0, 589858, 54, 0, 589859, 54, 0, 589860, 54, 0, 589861, 54, 0, 589862, 54, 0, 589863, 56, 0, 655360, 53, 0, 655391, 56, 0, 655392, 54, 0, 655393, 54, 0, 655394, 54, 0, 655395, 54, 0, 655396, 54, 0, 655397, 54, 0, 655398, 54, 0, 655399, 56, 0, 720896, 53, 0, 720927, 56, 0, 720928, 54, 0, 720929, 54, 0, 720930, 54, 0, 720931, 54, 0, 720932, 54, 0, 720933, 54, 0, 720934, 54, 0, 720935, 56, 0, 786432, 53, 0, 786463, 56, 0, 786464, 54, 0, 786465, 54, 0, 786466, 54, 0, 786467, 54, 0, 786468, 54, 0, 786469, 54, 0, 786470, 54, 0, 786471, 56, 0, 851968, 53, 0, 851984, 59, 0, 851985, 2, 0, 851986, 2, 0, 851987, 2, 0, 851988, 2, 0, 851989, 2, 0, 851990, 2, 0, 851991, 2, 0, 851992, 2, 0, 851993, 2, 0, 851994, 2, 0, 851995, 2, 0, 851996, 2, 0, 851997, 2, 0, 851998, 2, 0, 851999, 56, 0, 852000, 54, 0, 852001, 54, 0, 852002, 54, 0, 852003, 54, 0, 852004, 54, 0, 852005, 54, 0, 852006, 54, 0, 852007, 56, 0, 917504, 53, 0, 917520, 5, 0, 917521, 6, 0, 917522, 6, 0, 917523, 6, 0, 917524, 6, 0, 917525, 6, 0, 917526, 6, 0, 917527, 6, 0, 917528, 6, 0, 917529, 6, 0, 917530, 6, 0, 917531, 6, 0, 917532, 6, 0, 917533, 6, 0, 917534, 6, 0, 917535, 56, 0, 917536, 54, 0, 917537, 54, 0, 917538, 54, 0, 917539, 54, 0, 917540, 54, 0, 917541, 54, 0, 917542, 54, 0, 917543, 56, 0, 983040, 53, 0, 983056, 5, 0, 983057, 6, 0, 983058, 6, 0, 983059, 6, 0, 983060, 6, 0, 983061, 6, 0, 983062, 6, 0, 983063, 6, 0, 983064, 6, 0, 983065, 6, 0, 983066, 6, 0, 983067, 6, 0, 983068, 6, 0, 983069, 6, 0, 983070, 6, 0, 983071, 56, 0, 983072, 54, 0, 983073, 54, 0, 983074, 54, 0, 983075, 54, 0, 983076, 54, 0, 983077, 54, 0, 983078, 54, 0, 983079, 56, 0, 1048576, 53, 0, 1048592, 5, 0, 1048593, 6, 0, 1048594, 6, 0, 1048595, 6, 0, 1048596, 6, 0, 1048597, 6, 0, 1048598, 6, 0, 1048599, 6, 0, 1048600, 6, 0, 1048601, 6, 0, 1048602, 6, 0, 1048603, 6, 0, 1048604, 6, 0, 1048605, 6, 0, 1048606, 6, 0, 1048607, 56, 0, 1048608, 54, 0, 1048609, 54, 0, 1048610, 54, 0, 1048611, 54, 0, 1048612, 54, 0, 1048613, 54, 0, 1048614, 54, 0, 1048615, 56, 0, 1114112, 53, 0, 1114128, 5, 0, 1114129, 6, 0, 1114130, 6, 0, 1114131, 6, 0, 1114132, 6, 0, 1114133, 6, 0, 1114134, 6, 0, 1114135, 6, 0, 1114136, 6, 0, 1114137, 6, 0, 1114138, 6, 0, 1114139, 6, 0, 1114140, 6, 0, 1114141, 6, 0, 1114142, 6, 0, 1114143, 56, 0, 1114144, 54, 0, 1114145, 54, 0, 1114146, 54, 0, 1114147, 54, 0, 1114148, 54, 0, 1114149, 54, 0, 1114150, 54, 0, 1114151, 56, 0, 1179648, 53, 0, 1179664, 5, 0, 1179665, 6, 0, 1179666, 6, 0, 1179667, 6, 0, 1179668, 6, 0, 1179669, 6, 0, 1179670, 6, 0, 1179671, 6, 0, 1179672, 6, 0, 1179673, 6, 0, 1179674, 6, 0, 1179675, 6, 0, 1179676, 6, 0, 1179677, 6, 0, 1179678, 6, 0, 1179679, 56, 0, 1179680, 54, 0, 1179681, 54, 0, 1179682, 54, 0, 1179683, 54, 0, 1179684, 54, 0, 1179685, 54, 0, 1179686, 54, 0, 1179687, 56, 0, 1245184, 53, 0, 1245185, 2, 0, 1245186, 2, 0, 1245187, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245190, 2, 0, 1245191, 2, 0, 1245192, 2, 0, 1245193, 2, 0, 1245194, 2, 0, 1245195, 2, 0, 1245196, 2, 0, 1245197, 2, 0, 1245198, 2, 0, 1245199, 2, 0, 1245200, 2, 0, 1245201, 2, 0, 1245202, 2, 0, 1245203, 2, 0, 1245204, 2, 0, 1245205, 2, 0, 1245206, 2, 0, 1245207, 2, 0, 1245208, 2, 0, 1245209, 2, 0, 1245210, 2, 0, 1245211, 2, 0, 1245212, 2, 0, 1245213, 2, 0, 1245214, 2, 0, 1245215, 56, 0, 1245216, 54, 0, 1245217, 54, 0, 1245218, 54, 0, 1245219, 54, 0, 1245220, 54, 0, 1245221, 54, 0, 1245222, 54, 0, 1245223, 56, 0, 1310720, 53, 0, 1310721, 6, 0, 1310722, 6, 0, 1310723, 6, 0, 1310724, 6, 0, 1310725, 6, 0, 1310726, 6, 0, 1310727, 6, 0, 1310728, 6, 0, 1310729, 6, 0, 1310730, 6, 0, 1310731, 6, 0, 1310732, 6, 0, 1310733, 6, 0, 1310734, 6, 0, 1310735, 6, 0, 1310736, 6, 0, 1310737, 6, 0, 1310738, 6, 0, 1310739, 6, 0, 1310740, 6, 0, 1310741, 6, 0, 1310742, 6, 0, 1310743, 6, 0, 1310744, 6, 0, 1310745, 6, 0, 1310746, 6, 0, 1310747, 6, 0, 1310748, 6, 0, 1310749, 6, 0, 1310750, 6, 0, 1310751, 56, 0, 1310752, 54, 0, 1310753, 54, 0, 1310754, 54, 0, 1310755, 54, 0, 1310756, 54, 0, 1310757, 54, 0, 1310758, 54, 0, 1310759, 56, 0, 1376256, 53, 0, 1376257, 6, 0, 1376258, 6, 0, 1376259, 6, 0, 1376260, 6, 0, 1376261, 6, 0, 1376262, 6, 0, 1376263, 6, 0, 1376264, 6, 0, 1376265, 6, 0, 1376266, 6, 0, 1376267, 6, 0, 1376268, 6, 0, 1376269, 6, 0, 1376270, 6, 0, 1376271, 6, 0, 1376272, 6, 0, 1376273, 6, 0, 1376274, 6, 0, 1376275, 6, 0, 1376276, 6, 0, 1376277, 6, 0, 1376278, 6, 0, 1376279, 6, 0, 1376280, 6, 0, 1376281, 6, 0, 1376282, 6, 0, 1376283, 6, 0, 1376284, 6, 0, 1376285, 6, 0, 1376286, 6, 0, 1376287, 56, 0, 1376288, 54, 0, 1376289, 54, 0, 1376290, 54, 0, 1376291, 54, 0, 1376292, 54, 0, 1376293, 54, 0, 1376294, 54, 0, 1376295, 56, 0, 1441792, 53, 0, 1441793, 6, 0, 1441794, 6, 0, 1441795, 6, 0, 1441796, 6, 0, 1441797, 6, 0, 1441798, 6, 0, 1441799, 6, 0, 1441800, 6, 0, 1441801, 6, 0, 1441802, 6, 0, 1441803, 6, 0, 1441804, 6, 0, 1441805, 6, 0, 1441806, 6, 0, 1441807, 6, 0, 1441808, 6, 0, 1441809, 6, 0, 1441810, 6, 0, 1441811, 6, 0, 1441812, 6, 0, 1441813, 6, 0, 1441814, 6, 0, 1441815, 6, 0, 1441816, 6, 0, 1441817, 6, 0, 1441818, 6, 0, 1441819, 6, 0, 1441820, 6, 0, 1441821, 6, 0, 1441822, 6, 0, 1441823, 56, 0, 1441824, 54, 0, 1441825, 54, 0, 1441826, 54, 0, 1441827, 54, 0, 1441828, 54, 0, 1441829, 54, 0, 1441830, 54, 0, 1441831, 56, 0, 1507328, 51, 0, 1507329, 47, 0, 1507330, 47, 0, 1507331, 47, 0, 1507332, 47, 0, 1507333, 47, 0, 1507334, 47, 0, 1507335, 47, 0, 1507336, 47, 0, 1507337, 47, 0, 1507338, 47, 0, 1507339, 47, 0, 1507340, 47, 0, 1507341, 47, 0, 1507342, 47, 0, 1507343, 47, 0, 1507344, 47, 0, 1507345, 47, 0, 1507346, 47, 0, 1507347, 47, 0, 1507348, 47, 0, 1507349, 47, 0, 1507350, 47, 0, 1507351, 47, 0, 1507352, 47, 0, 1507353, 47, 0, 1507354, 47, 0, 1507355, 47, 0, 1507356, 47, 0, 1507357, 47, 0, 1507358, 47, 0, 1507359, 47, 0, 1507360, 47, 0, 1507361, 47, 0, 1507362, 47, 0, 1507363, 47, 0, 1507364, 47, 0, 1507365, 47, 0, 1507366, 47, 0, 1507367, 50, 0 )
 
-[node name="Player-KinematicBody2D" parent="." instance=ExtResource( 2 )]
+[node name="Player-KinematicBody2D" parent="." instance=ExtResource( 9 )]
 position = Vector2( 32, 272 )
 
-[node name="KinematicBody2D-Box" parent="." instance=ExtResource( 1 )]
-position = Vector2( 176, 285 )
+[node name="Panel" type="Panel" parent="."]
+margin_left = 506.0
+margin_top = 17.0
+margin_right = 625.0
+margin_bottom = 366.0
+script = ExtResource( 4 )
+path = "res://scenes/levels/level1/Node2D-Level1-1.tscn"
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 30.0
+margin_top = 7.0
+margin_right = 85.0
+margin_bottom = 21.0
+text = "Cenários"
+
+[node name="btnScene1" type="Button" parent="Panel"]
+margin_left = 6.0
+margin_top = 31.0
+margin_right = 61.0
+margin_bottom = 59.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+text = "Cena 1"
+
+[node name="btnScene2" type="Button" parent="Panel"]
+margin_left = 6.0
+margin_top = 71.0
+margin_right = 61.0
+margin_bottom = 99.0
+disabled = true
+enabled_focus_mode = 0
+text = "Cena 2"
+
+[node name="btnMergeScene2" type="Button" parent="Panel"]
+margin_left = 62.0
+margin_top = 31.0
+margin_right = 95.0
+margin_bottom = 59.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
+
+[node name="btnResetScene2" type="Button" parent="Panel"]
+margin_left = 62.0
+margin_top = 71.0
+margin_right = 95.0
+margin_bottom = 99.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+
+[node name="Transition_in" parent="." instance=ExtResource( 7 )]
+
+[node name="Transition_out" parent="." instance=ExtResource( 8 )]
+
+[connection signal="pressed" from="Panel/btnScene1" to="Panel" method="_on_btnScene1_pressed"]
+[connection signal="pressed" from="Panel/btnMergeScene2" to="Panel" method="_on_btnMergeScene2_pressed"]
+[connection signal="pressed" from="Panel/btnResetScene2" to="Panel" method="_on_btnResetScene2_pressed"]

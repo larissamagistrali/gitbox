@@ -8,11 +8,25 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "PushableObject",
+"language": "GDScript",
+"path": "res://scripts/PushableObject.gd"
+} ]
+_global_script_class_icons={
+"PushableObject": ""
+}
+
 [application]
 
 config/name="Gitbox-game"
 run/main_scene="res://scenes/itens/menu.tscn"
 config/icon="res://assets/icon.png"
+
+[autoload]
+
+Level1Global="*res://scripts/Level1Global.gd"
 
 [display]
 
