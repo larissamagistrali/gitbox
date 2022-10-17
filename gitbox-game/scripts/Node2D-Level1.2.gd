@@ -27,8 +27,10 @@ func merge(var objects):
 func reset():	
 	print("Reset Scene 2")
 	for i in range(pushableObjectsInstance.size()):
-		pushableObjectsInstance[i].position = Vector2(pushableObjects[i].originalPositionX, pushableObjects[i].originalPositionY)
-		saveState()
+		pushableObjectsInstance[i].queue_free()
+	pushableObjectsInstance.clear()
+	pushableObjects.clear()
+	merge(Level1Global.originalObjects2)
 	
 func saveState():
 	print("Save State Scene 2")
