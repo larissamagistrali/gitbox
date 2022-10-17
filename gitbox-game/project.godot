@@ -11,8 +11,8 @@ config_version=4
 [application]
 
 config/name="Gitbox-game"
-run/main_scene="res://scenes/levels/Node2D-Levels.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://scenes/itens/menu.tscn"
+config/icon="res://assets/icon.png"
 
 [display]
 
