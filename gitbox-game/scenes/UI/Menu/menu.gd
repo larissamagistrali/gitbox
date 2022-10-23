@@ -4,7 +4,7 @@ func _ready():
 	pass
 	
 func _on_ButtonStart_pressed() -> void:
-	get_tree().change_scene("res://scenes/levels/level1/Node2D-Level1-1.tscn")
+	get_tree().change_scene("res://scenes/levels/level1/Level1-1.tscn")
 	
 func _on_ButtonQuit_pressed() -> void:
 	get_tree().quit()

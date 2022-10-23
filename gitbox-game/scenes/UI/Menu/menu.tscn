@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=2]
-[ext_resource path="res://scripts/menu.gd" type="Script" id=3]
+[ext_resource path="res://scenes/UI/Menu/menu.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
