@@ -3,7 +3,6 @@
 [ext_resource path="res://scenes/animations/Overlay.gd" type="Script" id=1]
 [ext_resource path="res://scenes/animations/Transition_in.gd" type="Script" id=2]
 
-
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 

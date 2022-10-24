@@ -10,10 +10,10 @@ func _on_ButtonQuit_pressed() -> void:
 	get_tree().quit()
 
 func _on_ButtonCommands_pressed() -> void:
-	get_tree().change_scene("res://scenes/itens/commands.tscn")
+	get_tree().change_scene("res://scenes/UI/Commands/commands.tscn")
 
 func _on_ButtonAbout_pressed() -> void:
-	get_tree().change_scene("res://scenes/itens/about.tscn")
+	get_tree().change_scene("res://scenes/UI/About/about.tscn")
 
 func _on_ButtonBack_pressed() -> void:
-	get_tree().change_scene("res://scenes/itens/menu.tscn")
+	get_tree().change_scene("res://scenes/UI/Menu/menu.tscn")
