@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	pass
+	get_node("initPopUp").popup_centered()
 	
 func _on_ButtonStart_pressed() -> void:
 	get_tree().change_scene("res://scenes/levels/level1/Level1-1.tscn")

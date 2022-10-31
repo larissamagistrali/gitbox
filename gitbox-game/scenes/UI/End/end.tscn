@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/UI/Menu/menu.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 75
+size = 30
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -30,12 +30,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -63.5
-margin_top = -45.0
-margin_right = 63.5
-margin_bottom = 45.0
+margin_left = -185.0
+margin_top = -94.0
+margin_right = 198.0
+margin_bottom = 98.0
 custom_fonts/font = SubResource( 1 )
-text = "FIM"
+text = "Parabéns!
+
+Você conseguiu finalizar 
+essa jornada usando seus
+ conhecimentos de git"
+align = 1
 
 [node name="ButtonBack" type="Button" parent="."]
 margin_right = 12.0

@@ -11,8 +11,7 @@ func _ready():
 func _on_btnScene2_pressed():
 	current_scene.saveState()
 	changer.change_scene(path)
-	$Dialog/WindowDialog.show()
-
+	
 func _on_btnResetScene2_pressed():
 	current_scene.reset()
 	

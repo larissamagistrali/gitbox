@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=2]
+[gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://scenes/levels/player/Player-KinematicBody2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/animations/Transition_in.tscn" type="PackedScene" id=2]
@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/levels/level1/Panel.gd" type="Script" id=7]
 [ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=8]
 [ext_resource path="res://assets/Terrain/Terrain (16x16).png" type="Texture" id=9]
-[ext_resource path="res://scenes/UI/Dialog/Dialog.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Main Characters/Idle (32x32).png" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1632,6 +1632,10 @@ font_data = ExtResource( 6 )
 [sub_resource type="DynamicFont" id=86]
 font_data = ExtResource( 6 )
 
+[sub_resource type="DynamicFont" id=90]
+size = 10
+font_data = ExtResource( 6 )
+
 [sub_resource type="DynamicFont" id=89]
 font_data = ExtResource( 6 )
 
@@ -1639,7 +1643,7 @@ font_data = ExtResource( 6 )
 script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 16, -48 )
+position = Vector2( 16, -42 )
 scale = Vector2( 1.69231, 1.69231 )
 texture = ExtResource( 8 )
 centered = false
@@ -1726,11 +1730,85 @@ margin_bottom = 337.0
 custom_fonts/font = SubResource( 86 )
 text = "Menu"
 
-[node name="Dialog" parent="Panel" instance=ExtResource( 10 )]
-margin_left = -506.0
-margin_top = -17.0
-margin_right = -506.0
-margin_bottom = -17.0
+[node name="checkoutPopUp" type="WindowDialog" parent="Panel"]
+visible = true
+margin_left = 147.0
+margin_top = 12.0
+margin_right = 308.0
+margin_bottom = 62.0
+
+[node name="Label" type="Label" parent="Panel/checkoutPopUp"]
+margin_left = 40.0
+margin_top = 10.0
+margin_right = 192.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 90 )
+text = "Você fez checkout 
+na branch1"
+
+[node name="Sprite" type="Sprite" parent="Panel/checkoutPopUp"]
+position = Vector2( 19, 21 )
+texture = ExtResource( 11 )
+
+[node name="mergePopUp" type="WindowDialog" parent="Panel"]
+visible = true
+margin_left = 41.0
+margin_top = -107.0
+margin_right = 202.0
+margin_bottom = -57.0
+
+[node name="Label" type="Label" parent="Panel/mergePopUp"]
+margin_left = 40.0
+margin_top = 10.0
+margin_right = 192.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 90 )
+text = "Você fez merge
+com a branch 2"
+
+[node name="Sprite" type="Sprite" parent="Panel/mergePopUp"]
+position = Vector2( 19, 21 )
+texture = ExtResource( 11 )
+
+[node name="resetPopUp" type="WindowDialog" parent="Panel"]
+visible = true
+margin_left = -157.0
+margin_top = -120.0
+margin_right = 4.0
+margin_bottom = -70.0
+
+[node name="Label" type="Label" parent="Panel/resetPopUp"]
+margin_left = 40.0
+margin_top = 10.0
+margin_right = 192.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 90 )
+text = "Você fez reset na
+branch1"
+
+[node name="Sprite" type="Sprite" parent="Panel/resetPopUp"]
+position = Vector2( 19, 21 )
+texture = ExtResource( 11 )
+
+[node name="conflictPopUp" type="WindowDialog" parent="Panel"]
+visible = true
+margin_left = -348.0
+margin_top = -121.0
+margin_right = -187.0
+margin_bottom = -71.0
+
+[node name="Label" type="Label" parent="Panel/conflictPopUp"]
+margin_left = 40.0
+margin_top = 10.0
+margin_right = 192.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 90 )
+text = "Ops. Ococrreu um 
+conflito em seu merge"
+
+[node name="Sprite" type="Sprite" parent="Panel/conflictPopUp"]
+position = Vector2( 19, 21 )
+texture = ExtResource( 11 )
 
 [node name="Transition_in" parent="." instance=ExtResource( 2 )]
 
