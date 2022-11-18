@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Traps/Rock Head/Idle.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 27, 23 )
+
+[node name="Button" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 13
+collision/safe_margin = 0.001
+
+[node name="Texture" type="Sprite" parent="."]
+position = Vector2( 11.3772, -8.41524 )
+scale = Vector2( 1.31537, 1.2845 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0.56638, -1.17574, 29.4063, 40.6459 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 14, -9 )
+shape = SubResource( 1 )

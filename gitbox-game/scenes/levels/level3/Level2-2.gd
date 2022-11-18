@@ -5,20 +5,14 @@ var pushableObjectsInstance = [];
 
 func _ready():
 	init()
-	yield(get_tree().create_timer(3.0), "timeout")
-	get_node("Panel/checkoutPopUp").popup_centered()
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_node("Panel/checkoutPopUp").hide()
 
 func init():
-	pushableObjects = Level1Global.objects2
+	pushableObjects = Level2Global.objects2
 	for object in pushableObjects:
-		var a = object.node.instance()
-		a.position = Vector2(object.positionX, object.positionY)
-		get_tree().get_current_scene().add_child(a)
-		pushableObjectsInstance.append(a)
-	if(Level2Global.isOpen):
-		print("ABRIU A PORTA")
+		var box_to_insert: KinematicBody2D = object.node.instance()
+		box_to_insert.position = Vector2(object.positionX, object.positionY)
+		get_tree().get_current_scene().add_child(box_to_insert)
+		pushableObjectsInstance.append(box_to_insert)
 	
 
 func merge(var objects):
@@ -63,20 +57,20 @@ func is_colliding(obj1: KinematicBody2D, obj2: KinematicBody2D):
 	return collisionShape1.shape.collide(collisionShape1.global_transform, collisionShape2.shape, collisionShape2.global_transform)
 
 func reset():	
-	print("Reset Scene 2")
+	print("Reset Successfully at Scene 2")
 	for i in range(pushableObjectsInstance.size()):
 		pushableObjectsInstance[i].queue_free()
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
-	merge(Level1Global.originalObjects2)
+	merge(Level2Global.originalObjects2)
 	yield(get_tree().create_timer(1.0), "timeout")
 	get_node("Panel/resetPopUp").popup_centered()
 	yield(get_tree().create_timer(2.0), "timeout")
 	get_node("Panel/resetPopUp").hide()
-	
+
 func saveState():
-	print("Save State Scene 2")
+	print("Save Scene 2 State")
 	for i in range(pushableObjectsInstance.size()):
 		pushableObjects[i].positionX = pushableObjectsInstance[i].position.x
 		pushableObjects[i].positionY = pushableObjectsInstance[i].position.y
-	Level1Global.objects2 = pushableObjects
+	Level1Global.objects1 = pushableObjects

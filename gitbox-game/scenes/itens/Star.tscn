@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/itens/book.png" type="Texture" id=1]
+[ext_resource path="res://assets/Items/book.png" type="Texture" id=1]
 [ext_resource path="res://scenes/itens/Star.gd" type="Script" id=2]
 [ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=3]
 
