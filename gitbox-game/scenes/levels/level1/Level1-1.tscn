@@ -1630,6 +1630,7 @@ font_data = ExtResource( 6 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=89]
+size = 14
 font_data = ExtResource( 6 )
 
 [node name="Level1-1" type="Node2D"]
@@ -1725,7 +1726,8 @@ margin_top = 18.0
 margin_right = 83.0
 margin_bottom = 38.0
 custom_fonts/font = SubResource( 89 )
-text = "branch1"
+text = "Fase 1
+branch1"
 
 [node name="Dialog" parent="." instance=ExtResource( 10 )]
 

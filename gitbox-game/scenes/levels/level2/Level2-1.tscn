@@ -1840,6 +1840,9 @@ texture = ExtResource( 12 )
 [node name="Default-Box" parent="." instance=ExtResource( 10 )]
 position = Vector2( 126, 159 )
 
+[node name="Default-Box2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 118, 272 )
+
 [connection signal="pressed" from="Panel/btnScene2" to="Panel" method="_on_btnScene2_pressed"]
 [connection signal="pressed" from="Panel/btnMergeScene2" to="Panel" method="_on_btnMergeScene2_pressed"]
 [connection signal="pressed" from="Panel/btnResetScene2" to="Panel" method="_on_btnResetScene2_pressed"]

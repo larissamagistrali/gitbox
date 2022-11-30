@@ -7,9 +7,9 @@ func _ready():
 	init()
 
 func init():
-	$Dialog/Container.hide()
-	
-	$Dialog/Container.add_msg("Checkout na branch 1")
+	if $Dialog/Container != null :
+		$Dialog/Container.hide()
+		$Dialog/Container.add_msg("Checkout na branch 1")
 	pushableObjects = Level1Global.objects1
 	for object in pushableObjects:
 		var box_to_insert: KinematicBody2D = object.node.instance()

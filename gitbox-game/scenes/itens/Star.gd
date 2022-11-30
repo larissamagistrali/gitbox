@@ -15,7 +15,7 @@ func _physics_process(delta:float)->void:
 	$Collision2.set_enabled(true)
 	$Collision3.set_enabled(true)
 	if $Collision.is_colliding() or $Collision2.is_colliding() or $Collision3.is_colliding():
-		get_tree().change_scene("res://scenes/UI/end.tscn")
+		get_tree().change_scene("res://scenes/levels/level2/Level2-1.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
 #	pass
