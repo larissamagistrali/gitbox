@@ -5,12 +5,13 @@ var pushableObjectsInstance = [];
 
 func _ready():
 	init()
-	yield(get_tree().create_timer(3.0), "timeout")
-	get_node("Panel/checkoutPopUp").popup_centered()
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_node("Panel/checkoutPopUp").hide()
 
 func init():
+	$Dialog/Container.hide()
+	$Dialog/Container.add_msg("Eu sou o GitNinja e vou ajudar você a adquirir os conhecimentos necessários para encarar o GIT...")
+	$Dialog/Container.add_msg("Git é um sistema de controle de versões usado principalmente no desenvolvimento de software...")
+	$Dialog/Container.add_msg("Utilize os comandos disponíveis para alcançar o grande livro da sabedoria.")
+	$Dialog/Container.add_msg("Checkout na branch 1")
 	pushableObjects = Level1Global.objects1
 	for object in pushableObjects:
 		var box_to_insert: KinematicBody2D = object.node.instance()
@@ -19,7 +20,7 @@ func init():
 		pushableObjectsInstance.append(box_to_insert)
 	
 
-func merge(var objects):
+func merge(var objects, var b):
 	if(!has_collision(objects)):
 		print("Merge Successfully in Scene 1")
 		for object_to_merge in objects:
@@ -29,16 +30,11 @@ func merge(var objects):
 			pushableObjects.append(PushableObject.new(object_to_merge.node, object_to_merge.positionX, object_to_merge.positionY, object_to_merge.originalPositionX, object_to_merge.originalPositionY))
 			pushableObjectsInstance.append(box_to_merge)
 		saveState()
-		yield(get_tree().create_timer(1.0), "timeout")
-		get_node("Panel/mergePopUp").popup_centered()
-		yield(get_tree().create_timer(2.0), "timeout")
-		get_node("Panel/mergePopUp").hide()
+		if b : 
+			$Dialog/Container.add_msg("Merge realizado")
 	else:
 		print("Merge Conflict")
-		yield(get_tree().create_timer(1.0), "timeout")
-		get_node("Panel/conflictPopUp").popup_centered()
-		yield(get_tree().create_timer(2.0), "timeout")
-		get_node("Panel/conflictPopUp").hide()
+		$Dialog/Container.add_msg("Conflito de branch ao realizar merge")
 	
 func has_collision(var objects):
 	var has_conflict = false
@@ -66,11 +62,8 @@ func reset():
 		pushableObjectsInstance[i].queue_free()
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
-	merge(Level1Global.originalObjects1)
-	yield(get_tree().create_timer(1.0), "timeout")
-	get_node("Panel/resetPopUp").popup_centered()
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_node("Panel/resetPopUp").hide()
+	$Dialog/Container.add_msg("Reset realizado")
+	merge(Level1Global.originalObjects1, false)
 
 func saveState():
 	print("Save Scene 1 State")

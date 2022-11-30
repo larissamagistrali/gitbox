@@ -5,10 +5,6 @@ var pushableObjectsInstance = [];
 
 func _ready():
 	init()
-	yield(get_tree().create_timer(3.0), "timeout")
-	get_node("Panel/checkoutPopUp").popup_centered()
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_node("Panel/checkoutPopUp").hide()
 
 func init():
 	pushableObjects = Level1Global.objects2
@@ -31,16 +27,8 @@ func merge(var objects):
 			pushableObjects.append(PushableObject.new(object_to_merge.node, object_to_merge.positionX, object_to_merge.positionY, object_to_merge.originalPositionX, object_to_merge.originalPositionY))
 			pushableObjectsInstance.append(box_to_merge)
 		saveState()
-		yield(get_tree().create_timer(1.0), "timeout")
-		get_node("Panel/mergePopUp").popup_centered()
-		yield(get_tree().create_timer(2.0), "timeout")
-		get_node("Panel/mergePopUp").hide()
 	else:
 		print("Merge Conflict")
-		yield(get_tree().create_timer(1.0), "timeout")
-		get_node("Panel/conflictPopUp").popup_centered()
-		yield(get_tree().create_timer(2.0), "timeout")
-		get_node("Panel/conflictPopUp").hide()
 	
 func has_collision(var objects):
 	var has_conflict = false
@@ -69,10 +57,6 @@ func reset():
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
 	merge(Level1Global.originalObjects2)
-	yield(get_tree().create_timer(1.0), "timeout")
-	get_node("Panel/resetPopUp").popup_centered()
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_node("Panel/resetPopUp").hide()
 	
 func saveState():
 	print("Save State Scene 2")

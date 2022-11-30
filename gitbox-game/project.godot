@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Gitbox-game"
-run/main_scene="res://scenes/UI/Menu/menu.tscn"
+run/main_scene="res://scenes/UI/menu.tscn"
 config/icon="res://assets/icon.png"
 
 [autoload]

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=2]
-[ext_resource path="res://scenes/UI/Menu/menu.gd" type="Script" id=3]
+[ext_resource path="res://scenes/UI/menuScript.gd" type="Script" id=3]
 [ext_resource path="res://assets/Main Characters/Idle (32x32).png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=2]
@@ -54,21 +54,22 @@ custom_fonts/font = SubResource( 2 )
 text = "Start"
 icon_align = 1
 
-[node name="ButtonQuit2" type="Button" parent="VBoxContainer"]
+[node name="ButtonRank" type="Button" parent="VBoxContainer"]
 margin_top = 34.0
 margin_right = 293.0
 margin_bottom = 64.0
-focus_neighbour_bottom = NodePath("../ButtonStart")
+rect_pivot_offset = Vector2( -260, -149 )
 custom_colors/font_color_focus = Color( 0.815686, 0.772549, 0.0392157, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.815686, 0.772549, 0.0392157, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Melhores tempos"
+text = "Melhores Tempos"
 icon_align = 1
 
 [node name="ButtonCommands" type="Button" parent="VBoxContainer"]
 margin_top = 68.0
 margin_right = 293.0
 margin_bottom = 98.0
+rect_pivot_offset = Vector2( -260, -149 )
 custom_colors/font_color_focus = Color( 0.815686, 0.772549, 0.0392157, 1 )
 custom_colors/font_color_hover = Color( 0.815686, 0.772549, 0.0392157, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -91,7 +92,7 @@ margin_right = 293.0
 margin_bottom = 166.0
 focus_neighbour_bottom = NodePath("../ButtonStart")
 custom_colors/font_color_focus = Color( 0.815686, 0.772549, 0.0392157, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.815686, 0.772549, 0.0392157, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Sair"
 icon_align = 1
@@ -135,7 +136,7 @@ position = Vector2( 26, 75 )
 texture = ExtResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/ButtonStart" to="." method="_on_ButtonStart_pressed"]
-[connection signal="pressed" from="VBoxContainer/ButtonQuit2" to="." method="_on_ButtonQuit_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonRank" to="." method="_on_ButtonRank_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonCommands" to="." method="_on_ButtonCommands_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonAbout" to="." method="_on_ButtonAbout_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonQuit" to="." method="_on_ButtonQuit_pressed"]
