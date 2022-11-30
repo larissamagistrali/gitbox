@@ -36,6 +36,7 @@ margin_bottom = 29.0
 rect_clip_content = false
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
+text = "Olá (Enter)"
 scroll_active = false
 
 [connection signal="timeout" from="Container/Timer" to="Container" method="_on_Timer_timeout"]

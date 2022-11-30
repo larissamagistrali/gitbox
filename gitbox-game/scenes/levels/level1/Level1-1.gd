@@ -8,9 +8,7 @@ func _ready():
 
 func init():
 	$Dialog/Container.hide()
-	$Dialog/Container.add_msg("Eu sou o GitNinja e vou ajudar você a adquirir os conhecimentos necessários para encarar o GIT...")
-	$Dialog/Container.add_msg("Git é um sistema de controle de versões usado principalmente no desenvolvimento de software...")
-	$Dialog/Container.add_msg("Utilize os comandos disponíveis para alcançar o grande livro da sabedoria.")
+	
 	$Dialog/Container.add_msg("Checkout na branch 1")
 	pushableObjects = Level1Global.objects1
 	for object in pushableObjects:

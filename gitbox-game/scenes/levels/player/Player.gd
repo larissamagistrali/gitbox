@@ -4,7 +4,7 @@ var velocity = Vector2.ZERO
 var move_speed = 500
 var move_speed_objects = 200
 var gravity = 1200
-var jump_force = -450
+var jump_force = -400
 var is_grounded
 onready var raycasts = $"Raycasts-Node2D"
 var is_pushing = false;

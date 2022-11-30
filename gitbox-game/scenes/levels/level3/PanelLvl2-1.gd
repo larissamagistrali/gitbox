@@ -23,4 +23,4 @@ func _on_btnMergeScene2_pressed():
 	current_scene.merge(Level2Global.objects2)
 
 func _on_btnMenu_pressed() -> void:
-	changer.change_scene("res://scenes/UI/Menu/menu.tscn")
+	changer.change_scene("res://scenes/UI/menu.tscn")

@@ -13,11 +13,11 @@ func init():
 		a.position = Vector2(object.positionX, object.positionY)
 		get_tree().get_current_scene().add_child(a)
 		pushableObjectsInstance.append(a)
-	if(Level2Global.isOpen):
-		print("ABRIU A PORTA")
+	$Dialog/Container.hide()
+	$Dialog/Container.add_msg("Checkout na branch 2")
 	
 
-func merge(var objects):
+func merge(var objects, var b):
 	if(!has_collision(objects)):
 		print("Merge Successfully in Scene 2")
 		for object_to_merge in objects:
@@ -27,8 +27,11 @@ func merge(var objects):
 			pushableObjects.append(PushableObject.new(object_to_merge.node, object_to_merge.positionX, object_to_merge.positionY, object_to_merge.originalPositionX, object_to_merge.originalPositionY))
 			pushableObjectsInstance.append(box_to_merge)
 		saveState()
+		if b : 
+			$Dialog/Container.add_msg("Merge realizado")
 	else:
 		print("Merge Conflict")
+		$Dialog/Container.add_msg("Conflito de branch ao realizar merge")
 	
 func has_collision(var objects):
 	var has_conflict = false
@@ -56,7 +59,8 @@ func reset():
 		pushableObjectsInstance[i].queue_free()
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
-	merge(Level1Global.originalObjects2)
+	merge(Level1Global.originalObjects2,false)
+	$Dialog/Container.add_msg("Reset realizado")
 	
 func saveState():
 	print("Save State Scene 2")

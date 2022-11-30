@@ -5,7 +5,6 @@
 [ext_resource path="res://assets/Main Characters/Pink Man/Double Jump (32x32).png" type="Texture" id=3]
 [ext_resource path="res://assets/Main Characters/Pink Man/Run (32x32).png" type="Texture" id=4]
 
-
 [sub_resource type="Animation" id=2]
 length = 0.001
 tracks/0/type = "value"
@@ -204,7 +203,6 @@ enabled = true
 cast_to = Vector2( 0, 32 )
 collision_mask = 4
 
-<<<<<<<< HEAD:gitbox-game/scenes/player/Player-KinematicBody2D.tscn
 [node name="Push-Node2D" type="Node2D" parent="."]
 
 [node name="RayCast2D-right" type="RayCast2D" parent="Push-Node2D"]
@@ -214,16 +212,5 @@ collision_mask = 8
 
 [node name="RayCast2D-left" type="RayCast2D" parent="Push-Node2D"]
 position = Vector2( -10, 0 )
-========
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="PushRight" type="RayCast2D" parent="."]
-position = Vector2( 8, 8 )
-cast_to = Vector2( 2, 0 )
-collision_mask = 8
-
-[node name="PushLeft" type="RayCast2D" parent="."]
-position = Vector2( -8, 8 )
->>>>>>>> 2b86ad1 (add scene change, merge mechanic and reset mechanic):gitbox-game/scenes/levels/player/Player-KinematicBody2D.tscn
 cast_to = Vector2( -2, 0 )
 collision_mask = 8
