@@ -15,6 +15,7 @@ func init():
 		pushableObjectsInstance.append(a)
 	$Dialog/Container.hide()
 	$Dialog/Container.add_msg("Checkout na branch 2")
+	$AudioStreamPlayer2D.play()
 	
 
 func merge(var objects, var b):
@@ -29,9 +30,11 @@ func merge(var objects, var b):
 		saveState()
 		if b : 
 			$Dialog/Container.add_msg("Merge realizado")
+			$AudioStreamPlayer2D.play()
 	else:
 		print("Merge Conflict")
 		$Dialog/Container.add_msg("Conflito de branch ao realizar merge")
+		$AudioStreamPlayer2D.play()
 	
 func has_collision(var objects):
 	var has_conflict = false
@@ -61,6 +64,7 @@ func reset():
 	pushableObjects.clear()
 	merge(Level1Global.originalObjects2,false)
 	$Dialog/Container.add_msg("Reset realizado")
+	$AudioStreamPlayer2D.play()
 	
 func saveState():
 	print("Save State Scene 2")

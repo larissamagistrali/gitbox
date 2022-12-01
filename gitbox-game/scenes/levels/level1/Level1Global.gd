@@ -13,8 +13,8 @@ func _ready() -> void:
 	#objects1.append(PushableObject.new(node, positionX, positionY, positionX, positionY))
 	
 	var node2 = preload("res://scenes/itens/DefaultBox.tscn")
-	var positionX2 = 92
-	var positionY2 = 284
+	var positionX2 = 300
+	var positionY2 = 200
 	originalObjects2.append(PushableObject.new(node2, positionX2, positionY2, positionX2, positionY2))
 	objects2.append(PushableObject.new(node2, positionX2, positionY2, positionX2, positionY2))
 	

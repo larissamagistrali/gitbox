@@ -48,6 +48,7 @@ func _get_input():
 func _input(event: InputEvent)->void:
 	if Input.is_action_pressed("jump") and is_grounded:
 		velocity.y = jump_force
+		$jump.play()
 		
 func _check_is_grounded():
 	for raycast in raycasts.get_children():
