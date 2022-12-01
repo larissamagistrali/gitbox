@@ -1660,6 +1660,7 @@ margin_bottom = 341.0
 text = "3"
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -4, 0 )
 tile_set = SubResource( 95 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 4

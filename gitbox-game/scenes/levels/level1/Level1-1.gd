@@ -10,7 +10,7 @@ func init():
 	if $Dialog/Container != null :
 		$Dialog/Container.hide()
 		$Dialog/Container.add_msg("Checkout na branch 1")
-		$AudioStreamPlayer2D.play()
+		$star.play()
 	pushableObjects = Level1Global.objects1
 	for object in pushableObjects:
 		var box_to_insert: KinematicBody2D = object.node.instance()
@@ -31,10 +31,10 @@ func merge(var objects, var b):
 		saveState()
 		if b : 
 			$Dialog/Container.add_msg("Merge realizado")
-			$AudioStreamPlayer2D.play()
+			$star.play()
 	else:
 		print("Merge Conflict")
-		$AudioStreamPlayer2D.play()
+		$star.play()
 		$Dialog/Container.add_msg("Conflito de branch ao realizar merge")
 	
 func has_collision(var objects):
@@ -63,7 +63,7 @@ func reset():
 		pushableObjectsInstance[i].queue_free()
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
-	$AudioStreamPlayer2D.play()
+	$star.play()
 	$Dialog/Container.add_msg("Reset realizado")
 	merge(Level1Global.originalObjects1, false)
 

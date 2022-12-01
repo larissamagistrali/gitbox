@@ -27,7 +27,7 @@ config/icon="res://assets/icon.png"
 [autoload]
 
 Level1Global="*res://scenes/levels/level1/Level1Global.gd"
-Level2Global="*res://scenes/levels/level3/Level2Global.gd"
+Level2Global="*res://scenes/levels/level3/Level3Global.gd"
 
 [display]
 
