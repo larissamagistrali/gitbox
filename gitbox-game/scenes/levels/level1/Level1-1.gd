@@ -7,6 +7,7 @@ func _ready():
 	init()
 
 func init():
+	$Star.setLevel(1)
 	if $Dialog/Container != null :
 		$Dialog/Container.hide()
 		$Dialog/Container.add_msg("Checkout na branch 1")

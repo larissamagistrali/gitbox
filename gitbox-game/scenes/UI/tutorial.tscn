@@ -1,10 +1,11 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://scenes/UI/tutorial.gd" type="Script" id=1]
 [ext_resource path="res://assets/Terrain/Terrain (16x16).png" type="Texture" id=2]
 [ext_resource path="res://scenes/itens/DefaultBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/UI/menuScript.gd" type="Script" id=5]
+[ext_resource path="res://assets/Musics/music.ogg" type="AudioStream" id=6]
 [ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=8]
 [ext_resource path="res://scenes/UI/dialog.tscn" type="PackedScene" id=10]
 
@@ -1688,6 +1689,11 @@ margin_bottom = 26.0
 custom_fonts/font = SubResource( 97 )
 text = "<- voltar"
 script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -2.0
+autoplay = true
 
 [connection signal="pressed" from="b1" to="." method="_on_b1_pressed"]
 [connection signal="pressed" from="b2" to="." method="_on_b2_pressed"]

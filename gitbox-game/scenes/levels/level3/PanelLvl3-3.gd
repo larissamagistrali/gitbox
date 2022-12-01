@@ -10,27 +10,22 @@ func _ready():
 	
 func _on_btnScene1_pressed():
 	current_scene.saveState()
-	changer.change_scene("res://scenes/levels/level3/Level2-1.tscn")	
-	
-func _on_btnScene3_pressed():
-	current_scene.saveState()
-	changer.change_scene("res://scenes/levels/level3/Level2-3.tscn")
+	changer.change_scene("res://scenes/levels/level3/Level3-1.tscn")	
 
 func _on_btnResetScene2_pressed():
 	current_scene.reset()
 
 func _on_btnMenu_pressed() -> void:
-	changer.change_scene("res://scenes/itens/menu.tscn")
+	changer.change_scene("res://scenes/UI/menu.tscn")
 
 
 func _on_btnMergeScene1_pressed():
-	current_scene.merge(Level1Global.objects1)
-
-
-func _on_btnMergeScene3_pressed():
-	pass # Replace with function body.
-
+	current_scene.merge(Level3Global.objects1,true)
 
 func _on_btnScene2_pressed():
 	current_scene.saveState()
-	changer.change_scene("res://scenes/levels/level2/Level2-2.tscn")
+	changer.change_scene("res://scenes/levels/level3/Level3-2.tscn")
+
+
+func _on_btnMergeScene2_pressed():
+	current_scene.merge(Level3Global.objects2,true)

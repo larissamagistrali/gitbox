@@ -7,17 +7,21 @@ func _ready():
 	init()
 
 func init():
-	if(Level2Global.isBtn1Pressed and Level2Global.isBtn2Pressed):
+	if(Level3Global.isBtn1Pressed and Level3Global.isBtn2Pressed):
 		$BlockDoor.queue_free()
-	pushableObjects = Level2Global.objects3
+	pushableObjects = Level3Global.objects3
 	for object in pushableObjects:
 		var box_to_insert: KinematicBody2D = object.node.instance()
 		box_to_insert.position = Vector2(object.positionX, object.positionY)
 		get_tree().get_current_scene().add_child(box_to_insert)
 		pushableObjectsInstance.append(box_to_insert)
+	if $Dialog/Container != null :
+		$Dialog/Container.hide()
+		$Dialog/Container.add_msg("Checkout na branch 3")
+		$star.play()
 	
 
-func merge(var objects):
+func merge(var objects,var b):
 	if(!has_collision(objects)):
 		print("Merge Successfully in Scene 1")
 		for object_to_merge in objects:
@@ -27,16 +31,14 @@ func merge(var objects):
 			pushableObjects.append(PushableObject.new(object_to_merge.node, object_to_merge.positionX, object_to_merge.positionY, object_to_merge.originalPositionX, object_to_merge.originalPositionY))
 			pushableObjectsInstance.append(box_to_merge)
 		saveState()
-		#yield(get_tree().create_timer(1.0), "timeout")
-		#get_node("Panel/mergePopUp").popup_centered()
-		#yield(get_tree().create_timer(2.0), "timeout")
-		#get_node("Panel/mergePopUp").hide()
+		if b : 
+			$Dialog/Container.add_msg("Merge realizado")
+			$star.play()
+
 	else:
 		print("Merge Conflict")
-		#yield(get_tree().create_timer(1.0), "timeout")
-		#get_node("Panel/conflictPopUp").popup_centered()
-		#yield(get_tree().create_timer(2.0), "timeout")
-		#get_node("Panel/conflictPopUp").hide()
+		$star.play()
+		$Dialog/Container.add_msg("Conflito de branch ao realizar merge")
 	
 func has_collision(var objects):
 	var has_conflict = false
@@ -64,15 +66,13 @@ func reset():
 		pushableObjectsInstance[i].queue_free()
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
-	merge(Level1Global.originalObjects1)
-	#yield(get_tree().create_timer(1.0), "timeout")
-	#get_node("Panel/resetPopUp").popup_centered()
-	#yield(get_tree().create_timer(2.0), "timeout")
-	#get_node("Panel/resetPopUp").hide()
+	merge(Level3Global.originalObjects1,false)
+	$star.play()
+	$Dialog/Container.add_msg("Reset realizado")
 
 func saveState():
 	print("Save Scene 1 State")
 	for i in range(pushableObjectsInstance.size()):
 		pushableObjects[i].positionX = pushableObjectsInstance[i].position.x
 		pushableObjects[i].positionY = pushableObjectsInstance[i].position.y
-	Level1Global.objects1 = pushableObjects
+	Level3Global.objects1 = pushableObjects

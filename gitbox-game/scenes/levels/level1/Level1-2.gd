@@ -13,8 +13,9 @@ func init():
 		a.position = Vector2(object.positionX, object.positionY)
 		get_tree().get_current_scene().add_child(a)
 		pushableObjectsInstance.append(a)
-	$Dialog/Container.hide()
-	$Dialog/Container.add_msg("Checkout na branch 2")
+	if $Dialog/Container != null :
+		$Dialog/Container.hide()
+		$Dialog/Container.add_msg("Checkout na branch 2")
 	$AudioStreamPlayer2D.play()
 	
 

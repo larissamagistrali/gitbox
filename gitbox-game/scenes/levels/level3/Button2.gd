@@ -12,9 +12,9 @@ func _ready() -> void:
 func _physics_process(delta:float)->void:
 	$Collision2.set_enabled(true)
 	if $Collision2.is_colliding():
-		Level2Global.pressBtn2()
+		Level3Global.pressBtn2() 
 	else:
-		Level2Global.notPressBtn2()
+		Level3Global.notPressBtn2() 
 		#print(get_parent().name)
 		#get_parent().remove_child($BlockDoor)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
