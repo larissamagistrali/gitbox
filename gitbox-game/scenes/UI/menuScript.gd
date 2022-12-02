@@ -18,8 +18,6 @@ func _on_ButtonAbout_pressed() -> void:
 func _on_ButtonBack_pressed() -> void:
 	get_tree().change_scene("res://scenes/UI/menu.tscn")
 
-func _on_ButtonRank_pressed() -> void:
-	get_tree().change_scene("res://scenes/UI/rank.tscn")
 
 func _on_LinkButton_pressed():
 	OS.shell_open("https://git-scm.com/doc")

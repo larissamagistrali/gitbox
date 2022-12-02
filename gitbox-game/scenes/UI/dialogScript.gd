@@ -27,8 +27,8 @@ func _ready():
 	pass
 
 func _input(event):
-	#if event is InputEventKey and event.is_action_pressed("ui_accept"):
-	show_msg()
+	if event is InputEventKey and event.is_action_pressed("ui_accept"):
+		show_msg()
 
 func _on_Timer_timeout():
 	text.visible_characters +=1
