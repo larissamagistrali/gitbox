@@ -5,7 +5,7 @@ var move_speed = 500
 var move_speed_objects = 200
 var gravity = 1200
 var jump_force = -400
-var is_grounded
+var is_grounded = false
 onready var raycasts = $"Raycasts-Node2D"
 var is_pushing = false;
 
@@ -46,6 +46,7 @@ func _get_input():
 		$PushLeft.set_enabled(false)
 
 func _input(event: InputEvent)->void:
+	is_grounded = _check_is_grounded()
 	if Input.is_action_pressed("jump") and is_grounded:
 		velocity.y = jump_force
 		$jump.play()
