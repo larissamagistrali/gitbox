@@ -1770,18 +1770,18 @@ margin_bottom = 366.0
 script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Panel"]
-margin_left = 19.0
+margin_left = 16.0
 margin_top = 7.0
-margin_right = 102.0
+margin_right = 99.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 83 )
 text = "Comandos"
 
 [node name="btnScene1" type="Button" parent="Panel"]
 margin_left = 6.0
-margin_top = 32.0
-margin_right = 113.0
-margin_bottom = 57.0
+margin_top = 39.0
+margin_right = 111.0
+margin_bottom = 55.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 85 )
@@ -1790,10 +1790,10 @@ text = "git checkout branch 1"
 flat = true
 
 [node name="btnScene3" type="Button" parent="Panel"]
-margin_left = 6.0
-margin_top = 58.0
-margin_right = 113.0
-margin_bottom = 83.0
+margin_left = 7.0
+margin_top = 55.0
+margin_right = 112.0
+margin_bottom = 80.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 85 )
@@ -1802,10 +1802,10 @@ text = "git checkout branch 3"
 flat = true
 
 [node name="btnMergeScene1" type="Button" parent="Panel"]
-margin_left = -3.0
-margin_top = 85.0
-margin_right = 125.0
-margin_bottom = 113.0
+margin_left = 8.0
+margin_top = 93.0
+margin_right = 111.0
+margin_bottom = 109.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 87 )
@@ -1814,10 +1814,10 @@ text = "git merge branch 1"
 flat = true
 
 [node name="btnMergeScene3" type="Button" parent="Panel"]
-margin_left = -4.0
-margin_top = 114.0
-margin_right = 124.0
-margin_bottom = 142.0
+margin_left = -5.0
+margin_top = 109.0
+margin_right = 123.0
+margin_bottom = 137.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 87 )
@@ -1826,10 +1826,10 @@ text = "git merge branch 3"
 flat = true
 
 [node name="btnResetScene2" type="Button" parent="Panel"]
-margin_left = 8.0
-margin_top = 144.0
-margin_right = 115.0
-margin_bottom = 172.0
+margin_left = 4.0
+margin_top = 153.0
+margin_right = 111.0
+margin_bottom = 181.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 88 )

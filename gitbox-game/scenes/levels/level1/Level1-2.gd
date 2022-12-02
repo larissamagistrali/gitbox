@@ -63,9 +63,9 @@ func reset():
 		pushableObjectsInstance[i].queue_free()
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
-	merge(Level1Global.originalObjects2,false)
 	$Dialog/Container.add_msg("Reset realizado")
 	$AudioStreamPlayer2D.play()
+	merge(Level1Global.originalObjects2,false)
 	
 func saveState():
 	print("Save State Scene 2")

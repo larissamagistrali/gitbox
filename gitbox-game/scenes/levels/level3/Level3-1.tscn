@@ -1773,59 +1773,59 @@ custom_fonts/font = SubResource( 83 )
 text = "Comandos"
 
 [node name="btnScene2" type="Button" parent="Panel"]
-margin_left = 4.0
-margin_top = 30.0
+margin_left = 6.0
+margin_top = 39.0
 margin_right = 111.0
 margin_bottom = 55.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 85 )
 enabled_focus_mode = 0
-text = "git checkout branch2"
+text = "git checkout branch 2"
 flat = true
 
 [node name="btnScene3" type="Button" parent="Panel"]
-margin_left = 5.0
-margin_top = 53.0
+margin_left = 7.0
+margin_top = 55.0
 margin_right = 112.0
-margin_bottom = 78.0
+margin_bottom = 80.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 85 )
 enabled_focus_mode = 0
-text = "git checkout branch3"
+text = "git checkout branch 3"
 flat = true
 
 [node name="btnMergeScene2" type="Button" parent="Panel"]
-margin_left = -8.0
-margin_top = 76.0
-margin_right = 120.0
-margin_bottom = 104.0
+margin_left = 8.0
+margin_top = 93.0
+margin_right = 111.0
+margin_bottom = 109.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 87 )
 enabled_focus_mode = 0
-text = "git merge branch2"
+text = "git merge branch 2"
 flat = true
 
 [node name="btnMergeScene3" type="Button" parent="Panel"]
-margin_left = -7.0
-margin_top = 101.0
-margin_right = 121.0
-margin_bottom = 129.0
+margin_left = -5.0
+margin_top = 109.0
+margin_right = 123.0
+margin_bottom = 137.0
 rect_pivot_offset = Vector2( -294, -31 )
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 87 )
 enabled_focus_mode = 0
-text = "git merge branch3"
+text = "git merge branch 3"
 flat = true
 
 [node name="btnReset" type="Button" parent="Panel"]
-margin_left = -6.0
-margin_top = 125.0
-margin_right = 122.0
-margin_bottom = 153.0
+margin_left = 4.0
+margin_top = 153.0
+margin_right = 111.0
+margin_bottom = 181.0
 rect_pivot_offset = Vector2( -294, -31 )
 focus_mode = 0
 mouse_default_cursor_shape = 2

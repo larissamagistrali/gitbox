@@ -1806,18 +1806,18 @@ margin_bottom = 366.0
 script = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="Panel"]
-margin_left = 17.0
+margin_left = 16.0
 margin_top = 7.0
-margin_right = 100.0
+margin_right = 99.0
 margin_bottom = 27.0
 custom_fonts/font = SubResource( 83 )
 text = "Comandos"
 
 [node name="btnScene2" type="Button" parent="Panel"]
-margin_left = 7.0
-margin_top = 70.0
-margin_right = 114.0
-margin_bottom = 95.0
+margin_left = 6.0
+margin_top = 39.0
+margin_right = 111.0
+margin_bottom = 55.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 85 )
@@ -1826,10 +1826,10 @@ text = "git checkout branch 2"
 flat = true
 
 [node name="btnScene1" type="Button" parent="Panel"]
-margin_left = 6.0
-margin_top = 44.0
-margin_right = 113.0
-margin_bottom = 69.0
+margin_left = 7.0
+margin_top = 55.0
+margin_right = 112.0
+margin_bottom = 80.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 85 )
@@ -1838,10 +1838,10 @@ text = "git checkout branch 1"
 flat = true
 
 [node name="btnMergeScene1" type="Button" parent="Panel"]
-margin_left = -4.0
-margin_top = 99.0
-margin_right = 124.0
-margin_bottom = 127.0
+margin_left = 8.0
+margin_top = 93.0
+margin_right = 111.0
+margin_bottom = 109.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 87 )
@@ -1850,10 +1850,10 @@ text = "git merge branch 1"
 flat = true
 
 [node name="btnMergeScene2" type="Button" parent="Panel"]
-margin_left = -4.0
-margin_top = 127.0
-margin_right = 124.0
-margin_bottom = 155.0
+margin_left = -5.0
+margin_top = 109.0
+margin_right = 123.0
+margin_bottom = 137.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 87 )
@@ -1863,9 +1863,9 @@ flat = true
 
 [node name="btnResetScene2" type="Button" parent="Panel"]
 margin_left = 4.0
-margin_top = 158.0
+margin_top = 153.0
 margin_right = 111.0
-margin_bottom = 186.0
+margin_bottom = 181.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 88 )

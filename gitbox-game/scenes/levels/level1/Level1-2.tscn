@@ -1676,10 +1676,10 @@ custom_fonts/font = SubResource( 83 )
 text = "Comandos"
 
 [node name="btnScene1" type="Button" parent="Panel"]
-margin_left = 5.0
-margin_top = 37.0
-margin_right = 108.0
-margin_bottom = 62.0
+margin_left = 6.0
+margin_top = 39.0
+margin_right = 109.0
+margin_bottom = 55.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 84 )
@@ -1688,10 +1688,10 @@ text = "git checkout branch1"
 flat = true
 
 [node name="btnMergeScene2" type="Button" parent="Panel"]
-margin_left = 11.0
-margin_top = 64.0
-margin_right = 102.0
-margin_bottom = 92.0
+margin_left = 7.0
+margin_top = 65.0
+margin_right = 110.0
+margin_bottom = 90.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 87 )
@@ -1700,10 +1700,10 @@ text = "git merge branch1"
 flat = true
 
 [node name="btnResetScene2" type="Button" parent="Panel"]
-margin_left = 2.0
-margin_top = 99.0
-margin_right = 109.0
-margin_bottom = 127.0
+margin_left = 4.0
+margin_top = 93.0
+margin_right = 107.0
+margin_bottom = 109.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 88 )
