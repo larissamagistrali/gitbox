@@ -2114,11 +2114,11 @@ volume_db = -2.0
 stream = ExtResource( 12 )
 
 [node name="Dialog" parent="." instance=ExtResource( 11 )]
-visible = false
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 13 )
-volume_db = -1.0
+volume_db = -25.0
+autoplay = true
 
 [node name="Star" parent="." instance=ExtResource( 4 )]
 position = Vector2( 89, 91 )

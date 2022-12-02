@@ -1688,7 +1688,7 @@ stream = ExtResource( 11 )
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 12 )
-volume_db = -1.0
+volume_db = -25.0
 autoplay = true
 
 [node name="GrasslandEntities(16X16)-Copia" type="Sprite" parent="."]
