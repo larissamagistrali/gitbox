@@ -1,18 +1,21 @@
-[gd_scene load_steps=111 format=2]
+[gd_scene load_steps=114 format=2]
 
 [ext_resource path="res://scenes/levels/player/Player-KinematicBody2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/animations/Transition_in.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/animations/Transition_out.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/cthulho.png" type="Texture" id=4]
-[ext_resource path="res://scenes/levels/level2/Level2-1.gd" type="Script" id=5]
+[ext_resource path="res://assets/skull.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/level2/Level2-2.gd" type="Script" id=5]
 [ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scenes/levels/level2/Panel1-level2.gd" type="Script" id=7]
 [ext_resource path="res://assets/Terrain/caverna.png" type="Texture" id=8]
 [ext_resource path="res://assets/Terrain/Terrain (16x16).png" type="Texture" id=9]
-[ext_resource path="res://scenes/itens/DefaultBox.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/UI/dialog.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/Musics/star.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/Musics/music.ogg" type="AudioStream" id=13]
+[ext_resource path="res://assets/e1BJto.png" type="Texture" id=14]
+[ext_resource path="res://assets/mushroom.png" type="Texture" id=15]
+[ext_resource path="res://assets/Long_Grass.png" type="Texture" id=16]
+[ext_resource path="res://assets/t2.png" type="Texture" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1971,19 +1974,62 @@ font_data = ExtResource( 6 )
 size = 12
 font_data = ExtResource( 6 )
 
-[node name="Level2-1" type="Node2D"]
+[node name="Level2-2" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -50, 7 )
-scale = Vector2( 0.702, 0.702 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 8 )
 centered = false
 
 [node name="Cthulho" type="Sprite" parent="."]
-position = Vector2( 362, 301 )
-scale = Vector2( 0.152344, 0.152344 )
+position = Vector2( 80, 155 )
+scale = Vector2( 0.0825212, 0.108172 )
+texture = ExtResource( 14 )
+offset = Vector2( 2968.93, 1405.17 )
+
+[node name="Grass" type="Sprite" parent="."]
+position = Vector2( -24, 92 )
+scale = Vector2( 0.0825212, 0.108172 )
+texture = ExtResource( 16 )
+offset = Vector2( 2968.93, 1405.17 )
+
+[node name="Torch" type="Sprite" parent="."]
+position = Vector2( 197, -10 )
+scale = Vector2( 0.0825212, 0.108172 )
+texture = ExtResource( 17 )
+offset = Vector2( 2968.93, 1405.17 )
+
+[node name="Grass2" type="Sprite" parent="."]
+position = Vector2( -47, 94 )
+scale = Vector2( 0.0825212, 0.108172 )
+texture = ExtResource( 16 )
+offset = Vector2( 2968.93, 1405.17 )
+
+[node name="Cthulho4" type="Sprite" parent="."]
+position = Vector2( -115, 254 )
+scale = Vector2( 0.0475106, 0.0634612 )
+texture = ExtResource( 15 )
+offset = Vector2( 2968.93, 1405.17 )
+
+[node name="Cthulho5" type="Sprite" parent="."]
+position = Vector2( -185.008, 190.963 )
+scale = Vector2( 0.0767061, 0.102458 )
+texture = ExtResource( 15 )
+offset = Vector2( 2968.93, 1405.17 )
+
+[node name="Cthulho2" type="Sprite" parent="."]
+position = Vector2( 101, 156 )
+scale = Vector2( 0.0825212, 0.108172 )
+texture = ExtResource( 14 )
+offset = Vector2( 2968.93, 1405.17 )
+
+[node name="Cthulho3" type="Sprite" parent="."]
+position = Vector2( -7, 128 )
+scale = Vector2( 0.126261, 0.129086 )
 texture = ExtResource( 4 )
+offset = Vector2( 2968.93, 1405.17 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 5 )
@@ -2002,7 +2048,7 @@ margin_top = 17.0
 margin_right = 625.0
 margin_bottom = 366.0
 script = ExtResource( 7 )
-path = "res://scenes/levels/level1/Level1-2.tscn"
+path = "res://scenes/levels/level2/Level2-1.tscn"
 
 [node name="Label" type="Label" parent="Panel"]
 margin_left = 17.0
@@ -2083,9 +2129,6 @@ visible = false
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 13 )
 volume_db = -1.0
-
-[node name="Default-Box" parent="." instance=ExtResource( 10 )]
-position = Vector2( 314, 135 )
 
 [connection signal="pressed" from="Panel/btnScene2" to="Panel" method="_on_btnScene2_pressed"]
 [connection signal="pressed" from="Panel/btnMergeScene2" to="Panel" method="_on_btnMergeScene2_pressed"]

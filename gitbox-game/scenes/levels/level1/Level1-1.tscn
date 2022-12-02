@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/itens/Star.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/levels/level1/Level1-1.gd" type="Script" id=5]
 [ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://scenes/levels/level2/Panel1-level2.gd" type="Script" id=7]
+[ext_resource path="res://scenes/levels/level1/Panel1-level1.gd" type="Script" id=7]
 [ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=8]
 [ext_resource path="res://assets/Terrain/Terrain (16x16).png" type="Texture" id=9]
 [ext_resource path="res://scenes/UI/dialog.tscn" type="PackedScene" id=10]
@@ -1645,7 +1645,7 @@ enabled_focus_mode = 0
 text = "git merge branch2"
 flat = true
 
-[node name="btnResetScene2" type="Button" parent="Panel"]
+[node name="btnResetScene1" type="Button" parent="Panel"]
 margin_left = 4.0
 margin_top = 93.0
 margin_right = 107.0
@@ -1698,5 +1698,5 @@ texture = ExtResource( 13 )
 
 [connection signal="pressed" from="Panel/btnScene2" to="Panel" method="_on_btnScene2_pressed"]
 [connection signal="pressed" from="Panel/btnMergeScene2" to="Panel" method="_on_btnMergeScene2_pressed"]
-[connection signal="pressed" from="Panel/btnResetScene2" to="Panel" method="_on_btnResetScene2_pressed"]
+[connection signal="pressed" from="Panel/btnResetScene1" to="Panel" method="_on_btnResetScene1_pressed"]
 [connection signal="pressed" from="Panel/btnMenu" to="Panel" method="_on_btnMenu_pressed"]

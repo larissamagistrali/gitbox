@@ -22,8 +22,10 @@ func _physics_process(delta:float)->void:
 		$AudioStreamPlayer2D.play()
 		yield(get_tree().create_timer(0.2), "timeout")
 		if level==1:
+			TutorialGlobal.unlockLevel2()
 			get_tree().change_scene("res://scenes/levels/level2/Level2-1.tscn")
 		if level==2:
+			TutorialGlobal.unlockLevel3()
 			get_tree().change_scene("res://scenes/levels/level3/Level3-1.tscn")
 		if level==3:
 			get_tree().change_scene("res://scenes/UI/end.tscn")

@@ -29,6 +29,7 @@ config/icon="res://assets/icon.png"
 Level1Global="*res://scenes/levels/level1/Level1Global.gd"
 Level2Global="*res://scenes/levels/level2/Level2Global.gd"
 Level3Global="*res://scenes/levels/level3/Level3Global.gd"
+TutorialGlobal="*res://scenes/UI/TutorialGlobal.gd"
 
 [display]
 

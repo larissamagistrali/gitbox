@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/levels/player/Player-KinematicBody2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/levels/level1/Level1-2.gd" type="Script" id=5]
 [ext_resource path="res://assets/font/MilkyNice.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://scenes/levels/level1/Panel2.gd" type="Script" id=7]
+[ext_resource path="res://scenes/levels/level1/Panel2-level1.gd" type="Script" id=7]
 [ext_resource path="res://assets/Terrain/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=8]
 [ext_resource path="res://assets/Terrain/Terrain (16x16).png" type="Texture" id=9]
 [ext_resource path="res://scenes/UI/dialog.tscn" type="PackedScene" id=10]

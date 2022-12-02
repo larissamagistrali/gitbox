@@ -8,15 +8,15 @@ export var path : String
 func _ready():
 	pass
 	
-func _on_btnScene1_pressed():
+func _on_btnScene2_pressed():
 	current_scene.saveState()
 	changer.change_scene(path)
 
-func _on_btnResetScene2_pressed():
+func _on_btnResetScene1_pressed():
 	current_scene.reset()
 	
 func _on_btnMergeScene2_pressed():
-	current_scene.merge(Level2Global.objects1)
+	current_scene.merge(Level1Global.objects2, true)
 
 func _on_btnMenu_pressed() -> void:
-	changer.change_scene("res://scenes/itens/menu.tscn")
+	changer.change_scene("res://scenes/UI/menu.tscn")

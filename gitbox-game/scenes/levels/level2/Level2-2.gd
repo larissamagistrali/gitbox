@@ -5,13 +5,17 @@ var pushableObjectsInstance = [];
 
 func _ready():
 	init()
-	yield(get_tree().create_timer(3.0), "timeout")
-	get_node("Panel/checkoutPopUp").popup_centered()
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_node("Panel/checkoutPopUp").hide()
+	#yield(get_tree().create_timer(3.0), "timeout")
+	#get_node("Panel/checkoutPopUp").popup_centered()
+	#yield(get_tree().create_timer(2.0), "timeout")
+	#get_node("Panel/checkoutPopUp").hide()
 
 func init():
-	pushableObjects = Level1Global.objects2
+	if $Dialog/Container != null :
+		$Dialog/Container.hide()
+		$Dialog/Container.add_msg("Checkout na branch 2")
+		$star.play()
+	pushableObjects = Level2Global.objects2
 	for object in pushableObjects:
 		var a = object.node.instance()
 		a.position = Vector2(object.positionX, object.positionY)
@@ -28,16 +32,16 @@ func merge(var objects):
 			pushableObjects.append(PushableObject.new(object_to_merge.node, object_to_merge.positionX, object_to_merge.positionY, object_to_merge.originalPositionX, object_to_merge.originalPositionY))
 			pushableObjectsInstance.append(box_to_merge)
 		saveState()
-		yield(get_tree().create_timer(1.0), "timeout")
-		get_node("Panel/mergePopUp").popup_centered()
-		yield(get_tree().create_timer(2.0), "timeout")
-		get_node("Panel/mergePopUp").hide()
+		#yield(get_tree().create_timer(1.0), "timeout")
+		#get_node("Panel/mergePopUp").popup_centered()
+		#yield(get_tree().create_timer(2.0), "timeout")
+		#get_node("Panel/mergePopUp").hide()
 	else:
 		print("Merge Conflict")
-		yield(get_tree().create_timer(1.0), "timeout")
-		get_node("Panel/conflictPopUp").popup_centered()
-		yield(get_tree().create_timer(2.0), "timeout")
-		get_node("Panel/conflictPopUp").hide()
+		#yield(get_tree().create_timer(1.0), "timeout")
+		#get_node("Panel/conflictPopUp").popup_centered()
+		#yield(get_tree().create_timer(2.0), "timeout")
+		#get_node("Panel/conflictPopUp").hide()
 	
 func has_collision(var objects):
 	var has_conflict = false
@@ -65,15 +69,15 @@ func reset():
 		pushableObjectsInstance[i].queue_free()
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
-	merge(Level1Global.originalObjects2)
-	yield(get_tree().create_timer(1.0), "timeout")
-	get_node("Panel/resetPopUp").popup_centered()
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_node("Panel/resetPopUp").hide()
+	merge(Level2Global.originalObjects2)
+	#yield(get_tree().create_timer(1.0), "timeout")
+	#get_node("Panel/resetPopUp").popup_centered()
+	#yield(get_tree().create_timer(2.0), "timeout")
+	#get_node("Panel/resetPopUp").hide()
 	
 func saveState():
 	print("Save State Scene 2")
 	for i in range(pushableObjectsInstance.size()):
 		pushableObjects[i].positionX = pushableObjectsInstance[i].position.x
 		pushableObjects[i].positionY = pushableObjectsInstance[i].position.y
-	Level1Global.objects2 = pushableObjects
+	Level2Global.objects2 = pushableObjects
