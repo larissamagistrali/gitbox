@@ -7,7 +7,7 @@ func _ready():
 	init()
 
 func init():
-	pushableObjects = Level2Global.objects1
+	pushableObjects = Level3Global.objects1
 	for object in pushableObjects:
 		var box_to_insert: KinematicBody2D = object.node.instance()
 		box_to_insert.position = Vector2(object.positionX, object.positionY)
@@ -67,7 +67,7 @@ func reset():
 	pushableObjects.clear()
 	$star.play()
 	$Dialog/Container.add_msg("Reset realizado")
-	merge(Level1Global.originalObjects1,false)
+	merge(Level3Global.originalObjects1,false)
 
 
 func saveState():
@@ -75,5 +75,5 @@ func saveState():
 	for i in range(pushableObjectsInstance.size()):
 		pushableObjects[i].positionX = pushableObjectsInstance[i].position.x
 		pushableObjects[i].positionY = pushableObjectsInstance[i].position.y
-	Level1Global.objects1 = pushableObjects
+	Level3Global.objects1 = pushableObjects
 

@@ -7,6 +7,7 @@ func _ready():
 	init()
 
 func init():
+	$Star.setLevel(3)
 	if(Level3Global.isBtn1Pressed and Level3Global.isBtn2Pressed):
 		$BlockDoor.queue_free()
 	pushableObjects = Level3Global.objects3
@@ -61,18 +62,18 @@ func is_colliding(obj1: KinematicBody2D, obj2: KinematicBody2D):
 	return collisionShape1.shape.collide(collisionShape1.global_transform, collisionShape2.shape, collisionShape2.global_transform)
 
 func reset():	
-	print("Reset Successfully at Scene 1")
+	print("Reset Successfully at Scene 3")
 	for i in range(pushableObjectsInstance.size()):
 		pushableObjectsInstance[i].queue_free()
 	pushableObjectsInstance.clear()
 	pushableObjects.clear()
-	merge(Level3Global.originalObjects1,false)
+	merge(Level3Global.originalObjects3,false)
 	$star.play()
 	$Dialog/Container.add_msg("Reset realizado")
 
 func saveState():
-	print("Save Scene 1 State")
+	print("Save Scene 3 State")
 	for i in range(pushableObjectsInstance.size()):
 		pushableObjects[i].positionX = pushableObjectsInstance[i].position.x
 		pushableObjects[i].positionY = pushableObjectsInstance[i].position.y
-	Level3Global.objects1 = pushableObjects
+	Level3Global.objects3 = pushableObjects

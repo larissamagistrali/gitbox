@@ -10,11 +10,11 @@ var isBtn1Pressed = false
 var isBtn2Pressed = false
 
 func _ready() -> void:
-	var node = preload("res://scenes/itens/DefaultBox.tscn")
-	var positionX = 112
-	var positionY = 284
-	originalObjects1.append(PushableObject.new(node, positionX, positionY, positionX, positionY))
-	objects1.append(PushableObject.new(node, positionX, positionY, positionX, positionY))
+	#var node = preload("res://scenes/itens/DefaultBox.tscn")
+	#var positionX = 112
+	#var positionY = 284
+	#originalObjects1.append(PushableObject.new(node, positionX, positionY, positionX, positionY))
+	#objects1.append(PushableObject.new(node, positionX, positionY, positionX, positionY))
 	
 	var node2 = preload("res://scenes/itens/DefaultBox.tscn")
 	var positionX2 = 450
