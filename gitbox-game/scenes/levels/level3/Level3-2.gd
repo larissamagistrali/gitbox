@@ -75,4 +75,4 @@ func saveState():
 	for i in range(pushableObjectsInstance.size()):
 		pushableObjects[i].positionX = pushableObjectsInstance[i].position.x
 		pushableObjects[i].positionY = pushableObjectsInstance[i].position.y
-	Level3Global.objects1 = pushableObjects
+	Level3Global.objects2 = pushableObjects
